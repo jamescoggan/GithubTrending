@@ -2,7 +2,6 @@ package co.joebirch.githubtrending.test
 
 import co.joebirch.domain.model.Project
 
-import co.joebirch.domain.model.Project
 
 object ProjectDataFactory {
 

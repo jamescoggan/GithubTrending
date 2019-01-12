@@ -1,7 +1,7 @@
 package co.joebirch.githubtrending.browse
 
 import co.joebirch.domain.executor.PostExecutionThread
-import co.joebirch.domain.interactor.browse.BookmarkProject
+import co.joebirch.domain.interactor.bookmark.BookmarkProject
 import co.joebirch.domain.repository.ProjectsRepository
 import co.joebirch.githubtrending.test.ProjectDataFactory
 import com.nhaarman.mockito_kotlin.any
@@ -19,8 +19,10 @@ import org.mockito.junit.MockitoJUnitRunner
 class BookmarkProjectTest {
 
     private lateinit var bookmarkProject: BookmarkProject
-    @Mock lateinit var projectsRepository: ProjectsRepository
-    @Mock lateinit var postExecutionThread: PostExecutionThread
+    @Mock
+    lateinit var projectsRepository: ProjectsRepository
+    @Mock
+    lateinit var postExecutionThread: PostExecutionThread
 
     @Before
     fun setup() {

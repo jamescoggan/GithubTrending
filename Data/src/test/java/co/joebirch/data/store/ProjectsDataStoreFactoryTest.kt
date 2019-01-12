@@ -3,6 +3,7 @@ package co.joebirch.data.store
 import co.joebirch.data.repository.ProjectsCache
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.whenever
+import io.reactivex.Flowable
 import io.reactivex.Single
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -51,7 +52,7 @@ class ProjectsDataStoreFactoryTest {
 
     private fun stubProjectsCacheIsProjectsCachedExpired(expired: Boolean) {
         whenever(cache.isProjectsCacheExpired())
-                .thenReturn(Single.just(expired))
+                .thenReturn(Flowable.just(expired))
     }
 
 }
