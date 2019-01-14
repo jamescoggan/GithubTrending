@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'uast.jar',
+    maven_coords = 'com.android.tools.external.org-jetbrains:uast:jar:26.2.0',
+    sha256 = 'a439cafcddb2963620fd737005e3ce0560313362ede37e6c6eac5f10ff19eb94',
+)

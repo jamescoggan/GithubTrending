@@ -1,0 +1,123 @@
+java_annotation_processor(
+    name = 'processor_com.google.auto.value-auto-value-1.6',
+    processor_classes = [
+        'com.google.auto.value.extension.memoized.processor.MemoizedValidator',
+        'com.google.auto.value.processor.AutoAnnotationProcessor',
+        'com.google.auto.value.processor.AutoOneOfProcessor',
+        'com.google.auto.value.processor.AutoValueBuilderProcessor',
+        'com.google.auto.value.processor.AutoValueProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/com/google/auto/value:auto-value.jar',
+    ],
+    visibility = ['PUBLIC'],
+)
+
+java_annotation_processor(
+    name = 'processor_com.google.auto.value-auto-value-1.6__525046afa7fcbcf1dcd36f17908d83ff',
+    processor_classes = [
+        'com.google.auto.value.extension.memoized.processor.MemoizedValidator',
+        'com.google.auto.value.processor.AutoAnnotationProcessor',
+        'com.google.auto.value.processor.AutoOneOfProcessor',
+        'com.google.auto.value.processor.AutoValueBuilderProcessor',
+        'com.google.auto.value.processor.AutoValueProcessor',
+        'com.ryanharter.auto.value.gson.AutoValueGsonAdapterFactoryProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/com/google/auto/value:auto-value-annotations.jar',
+        '//.okbuck/ext/com/google/auto/value:auto-value.jar',
+        '//.okbuck/ext/com/google/auto:auto-common.jar',
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/google/guava:guava.jar',
+        '//.okbuck/ext/com/ryanharter/auto/value:auto-value-gson-annotations.jar',
+        '//.okbuck/ext/com/ryanharter/auto/value:auto-value-gson.jar',
+        '//.okbuck/ext/com/squareup:javapoet.jar',
+    ],
+    visibility = ['PUBLIC'],
+)
+
+java_annotation_processor(
+    name = 'processor_com.google.dagger-dagger-android-processor-2.16',
+    processor_classes = [
+        'dagger.android.processor.AndroidProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/com/google/code/findbugs:jsr305.jar',
+        '//.okbuck/ext/com/google/dagger:dagger-android-jarimpl.jar',
+        '//.okbuck/ext/com/google/dagger:dagger-android-processor.jar',
+        '//.okbuck/ext/com/google/dagger:dagger-android-support-jarimpl.jar',
+        '//.okbuck/ext/com/google/dagger:dagger.jar',
+        '//.okbuck/ext/com/google/errorprone:error_prone_annotations.jar',
+        '//.okbuck/ext/com/google/errorprone:javac-shaded.jar',
+        '//.okbuck/ext/com/google/googlejavaformat:google-java-format.jar',
+        '//.okbuck/ext/com/google/guava:guava.jar',
+        '//.okbuck/ext/com/google/j2objc:j2objc-annotations.jar',
+        '//.okbuck/ext/com/squareup:javapoet.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/codehaus/mojo:animal-sniffer-annotations.jar',
+    ],
+    visibility = ['PUBLIC'],
+)
+
+java_annotation_processor(
+    name = 'processor_com.google.dagger-dagger-compiler-2.16',
+    processor_classes = [
+        'dagger.internal.codegen.ComponentProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/com/google/code/findbugs:jsr305.jar',
+        '//.okbuck/ext/com/google/dagger:dagger-compiler.jar',
+        '//.okbuck/ext/com/google/dagger:dagger-producers.jar',
+        '//.okbuck/ext/com/google/dagger:dagger-spi.jar',
+        '//.okbuck/ext/com/google/dagger:dagger.jar',
+        '//.okbuck/ext/com/google/errorprone:error_prone_annotations.jar',
+        '//.okbuck/ext/com/google/errorprone:javac-shaded.jar',
+        '//.okbuck/ext/com/google/googlejavaformat:google-java-format.jar',
+        '//.okbuck/ext/com/google/guava:guava.jar',
+        '//.okbuck/ext/com/google/j2objc:j2objc-annotations.jar',
+        '//.okbuck/ext/com/squareup:javapoet.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/checkerframework:checker-compat-qual.jar',
+        '//.okbuck/ext/org/codehaus/mojo:animal-sniffer-annotations.jar',
+    ],
+    visibility = ['PUBLIC'],
+)
+
+java_annotation_processor(
+    name = 'processor_com.jakewharton-butterknife-compiler-10.0.0',
+    processor_classes = [
+        'butterknife.compiler.ButterKnifeProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/androidx/annotation:annotation.jar',
+        '//.okbuck/ext/com/google/auto:auto-common.jar',
+        '//.okbuck/ext/com/google/code/findbugs:jsr305.jar',
+        '//.okbuck/ext/com/google/errorprone:error_prone_annotations.jar',
+        '//.okbuck/ext/com/google/guava:guava.jar',
+        '//.okbuck/ext/com/google/j2objc:j2objc-annotations.jar',
+        '//.okbuck/ext/com/jakewharton:butterknife-annotations.jar',
+        '//.okbuck/ext/com/jakewharton:butterknife-compiler.jar',
+        '//.okbuck/ext/com/squareup:javapoet.jar',
+        '//.okbuck/ext/org/checkerframework:checker-compat-qual.jar',
+        '//.okbuck/ext/org/codehaus/mojo:animal-sniffer-annotations.jar',
+    ],
+    visibility = ['PUBLIC'],
+)
+
+java_annotation_processor(
+    name = 'processor_com.ryanharter.auto.value-auto-value-gson-0.7.0',
+    processor_classes = [
+        'com.ryanharter.auto.value.gson.AutoValueGsonAdapterFactoryProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/com/google/auto/value:auto-value.jar',
+        '//.okbuck/ext/com/google/auto:auto-common.jar',
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/google/guava:guava.jar',
+        '//.okbuck/ext/com/ryanharter/auto/value:auto-value-gson-annotations.jar',
+        '//.okbuck/ext/com/ryanharter/auto/value:auto-value-gson.jar',
+        '//.okbuck/ext/com/squareup:javapoet.jar',
+    ],
+    visibility = ['PUBLIC'],
+)

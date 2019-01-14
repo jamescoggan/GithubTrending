@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'collection.jar',
+    maven_coords = 'androidx.collection:collection:jar:1.0.0',
+    sha256 = '9c8d117b5c2bc120a1cdfeb857e05b495b16c36013570372a708f7827e3ac9f9',
+    sources_sha256 = '3dcefe7a84308582986dda5e2cf66fd3bd279f076e3a58c377e6ed66d5233b9d',
+)

@@ -1,0 +1,14 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'auto-value-annotations.jar',
+    maven_coords = 'com.google.auto.value:auto-value-annotations:jar:1.6',
+    sha256 = 'd095936c432f2afc671beaab67433e7cef50bba4a861b77b9c46561b801fae69',
+    sources_sha256 = '83127f3f8ce898920fe048568c2139169588e44fb42c9e000296374e56706178',
+)
+
+okbuck_prebuilt(
+    name = 'auto-value.jar',
+    maven_coords = 'com.google.auto.value:auto-value:jar:1.6',
+    sha256 = 'fd811b92bb59ae8a4cf7eb9dedd208300f4ea2b6275d726e4df52d8334aaae9d',
+)

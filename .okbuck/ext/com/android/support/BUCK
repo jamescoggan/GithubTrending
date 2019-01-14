@@ -1,0 +1,13 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'support-annotations.jar',
+    maven_coords = 'com.android.support:support-annotations:jar:21.0.3',
+    sha256 = 'fdee2354787ef66b268e75958de3f7f6c4f8f325510a6dac9f49c929f83a63de',
+)
+
+okbuck_prebuilt(
+    name = 'support-compat.aar',
+    maven_coords = 'com.android.support:support-compat:aar:26.1.0',
+    sha256 = '7d6da01cf9766b1705c6c80cfc12274a895b406c4c287900b07a56145ca6c030',
+)

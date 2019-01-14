@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'xz.jar',
+    maven_coords = 'org.tukaani:xz:jar:1.0',
+    sha256 = '7eafdc8880da10286c2398fa42e3bf68c3e845c35ae7a6ae67f5cc1fa16c7405',
+    sources_sha256 = 'c7a4ac4e558e264fb1b152a3fd7ab57ddb40da8f0d5f1818eade7c580119c117',
+)

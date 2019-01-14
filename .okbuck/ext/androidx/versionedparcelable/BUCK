@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'versionedparcelable.aar',
+    maven_coords = 'androidx.versionedparcelable:versionedparcelable:aar:1.0.0',
+    sha256 = 'f6438a93ed8016ccddca0e140a70be0b0110e0424edaa1472f84f98fed2e1ce3',
+    sources_sha256 = '7c71325912f13a9a919d6e2916834c7d0586233798c299a82a37646621405f0e',
+)

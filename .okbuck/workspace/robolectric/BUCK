@@ -1,0 +1,16 @@
+targets = {
+    '//.okbuck/ext/org/robolectric:android-all-8.1.0-robolectric-4611349.jar': 'android-all-8.1.0-robolectric-4611349.jar',
+    '//.okbuck/ext/org/robolectric:android-all-5.0.2_r3-robolectric-r0.jar': 'android-all-5.0.2_r3-robolectric-r0.jar',
+}
+
+bash_list = (
+    ["mkdir -p $OUT{}; ".format("")] +
+    ['cp $(location {}) $OUT{}/{};'.format(target, "", name) for (target, name) in targets.items()]
+)
+
+genrule(
+    name = 'robolectric_cache',
+    bash = " ".join(bash_list),
+    out = ".",
+    visibility = [ 'PUBLIC' ],
+)

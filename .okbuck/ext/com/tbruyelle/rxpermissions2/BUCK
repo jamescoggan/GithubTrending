@@ -1,0 +1,9 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'rxpermissions.aar',
+    maven_coords = 'com.tbruyelle.rxpermissions2:rxpermissions:aar:0.9.4',
+    sha256 = '2ccbc60fa9655235b2f44f1f67cfcdeaab52aecb5e961d2dbeadb21f0b1a8dcb',
+    sources_sha256 = 'bb2e25ec613635bb8145853e9a9b579d31ca55e9257ef141b132ef60a19f2500',
+    enable_jetifier = True,
+)

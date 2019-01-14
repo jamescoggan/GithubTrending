@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'scala-xml_2.12.jar',
+    maven_coords = 'org.scala-lang.modules:scala-xml_2.12:jar:1.0.6',
+    sha256 = '7cc3b6ceb56e879cb977e8e043f4bfe2e062f78795efd7efa09f85003cb3230a',
+    sources_sha256 = 'a7e8aac79394df396afda98b35537791809d815ce15ab2224f7d31e50c753922',
+)

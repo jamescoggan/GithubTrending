@@ -1,0 +1,24 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'leakcanary-analyzer.aar',
+    maven_coords = 'com.squareup.leakcanary:leakcanary-analyzer:aar:1.5.4',
+    sha256 = '5cff60f4714e962ef9a4c974584afdc883c23c500f420bdfab70060e7702291d',
+    sources_sha256 = 'd5c671708066f9bbc30f66871d60a24d0a4dc1bfc3802391064a4917521bb486',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'leakcanary-android.aar',
+    maven_coords = 'com.squareup.leakcanary:leakcanary-android:aar:1.5.4',
+    sha256 = 'd21bb98a22baae00213637a91fe74674820a91fd1960ce7f3d42e00d5e37683e',
+    sources_sha256 = 'b023575bb6aee8f19d5eb6a299cbc0b0cd1d3143a0db38a986f004538a303d0e',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'leakcanary-watcher.jar',
+    maven_coords = 'com.squareup.leakcanary:leakcanary-watcher:jar:1.5.4',
+    sha256 = '54af63587f4a7ef88194b53dd92c44df3062d6b46c37cf355a20c4ff1954c28c',
+    sources_sha256 = '181c18d30c537658e8ebc2223f88f6a25e6aeea7eb2e4bbae2abb8e7867f34a8',
+)

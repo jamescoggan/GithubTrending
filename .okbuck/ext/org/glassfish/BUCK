@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'javax.annotation.jar',
+    maven_coords = 'org.glassfish:javax.annotation:jar:10.0-b28',
+    sha256 = '339c876b928766329cc0657920366e75beb25f932b80bb3b26df6c0e687a9582',
+    sources_sha256 = '7d49933f48379146c58a985c14d82a5bb9dc8963ce012746e2bec6bb793ada73',
+)

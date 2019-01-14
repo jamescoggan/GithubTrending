@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'viewpager.aar',
+    maven_coords = 'androidx.viewpager:viewpager:aar:1.0.0',
+    sha256 = '147af4e14a1984010d8f155e5e19d781f03c1d70dfed02a8e0d18428b8fc8682',
+    sources_sha256 = 'd4f9a044ab8c23392b12a3f2930d5fd6b5982421a746f2f2a812e9619431fbfd',
+)

@@ -1,0 +1,21 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'scala-compiler.jar',
+    maven_coords = 'org.scala-lang:scala-compiler:jar:2.12.4',
+    sha256 = '8b681302aac584f7234547eed04d2beeeb4a4f00032220e29d40943be6906a01',
+)
+
+okbuck_prebuilt(
+    name = 'scala-library.jar',
+    maven_coords = 'org.scala-lang:scala-library:jar:2.12.4',
+    sha256 = '17824fcee4d3f46cfaa4da84ebad4f58496426c2b9bc9e341f812ab23a667d5d',
+    sources_sha256 = 'b9c34cf968a0e348ecec32837797a794ffeade2fe016323474fe756cb7d74042',
+)
+
+okbuck_prebuilt(
+    name = 'scala-reflect.jar',
+    maven_coords = 'org.scala-lang:scala-reflect:jar:2.12.4',
+    sha256 = 'ea70fe0e550e24d23fc52a18963b2be9c3b24283f4cb18b98327eb72746567cc',
+    sources_sha256 = '7b4dc73dc3cb46ac9ac948a0c231ccd989bed6cefb137c302a8ec8d6811e8148',
+)

@@ -1,0 +1,13 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'intellij-core.jar',
+    maven_coords = 'com.android.tools.external.com-intellij:intellij-core:jar:26.2.0',
+    sha256 = '03724f5aff30c8fff3d0b0c05e71f8dc21f246952fe1f3b5916bfb594e337bad',
+)
+
+okbuck_prebuilt(
+    name = 'kotlin-compiler.jar',
+    maven_coords = 'com.android.tools.external.com-intellij:kotlin-compiler:jar:26.2.0',
+    sha256 = '2f82e0c2687afe7c4941bdf6702d9a16d71d030a7ddb384a04a0537a361f4bb1',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'xpp3_min.jar',
+    maven_coords = 'xpp3:xpp3_min:jar:1.1.4c',
+    sha256 = 'bfc90e9e32d0eab1f397fb974b5f150a815188382ac41f372a7149d5bc178008',
+    sources_sha256 = 'd5aa7f9f222e5b42d72523a4fa4f6e686480a9eb2970dbef702a5022e0178398',
+)

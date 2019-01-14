@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'icu4j.jar',
+    maven_coords = 'com.ibm.icu:icu4j:jar:53.1',
+    sha256 = 'e37a4467bac5cdeb02c5c4b8e5063d2f4e67b69e3c7df6d6b610f13185572bab',
+    sources_sha256 = '610f0f35cd11415effe23b248ab129a316e7f73994c20ac1ebe7e092629eb994',
+)

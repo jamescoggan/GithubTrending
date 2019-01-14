@@ -1,0 +1,21 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'avro-ipc-tests.jar',
+    maven_coords = 'org.apache.avro:avro-ipc:jar:tests:1.7.7',
+    sha256 = '496c8137f1bc2e2fcaef8c42e4fe7aec02975d34487d413f7ad8cb8857626ddc',
+)
+
+okbuck_prebuilt(
+    name = 'avro-ipc.jar',
+    maven_coords = 'org.apache.avro:avro-ipc:jar:1.7.7',
+    sha256 = '55d369313d9947a8f3250837526bdb90b7608101b4acc881c32f35fc16cc21e2',
+    sources_sha256 = '2beec6844b77fed1e6aae17cd9be371b2e49eab0097b146585d0fc5eb9957561',
+)
+
+okbuck_prebuilt(
+    name = 'avro.jar',
+    maven_coords = 'org.apache.avro:avro:jar:1.7.7',
+    sha256 = '5ba0a81f4b0769122b6045b98bb9bbba5f2c69dbf736a6cc7ca4eb603c337487',
+    sources_sha256 = 'e445991d7f032cea66a8f53087c6cb1bf0d5b20bf2988611e4da8b9ced8b5721',
+)

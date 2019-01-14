@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'paranamer.jar',
+    maven_coords = 'com.thoughtworks.paranamer:paranamer:jar:2.3',
+    sha256 = 'e93f50ae4d0de11080677f44ab268691266fed2b3ff7bc6fd97636febae7d8fe',
+    sources_sha256 = '5691dc48d5f9a37303c7fd0d13fc3984edb4700030a498211924e5fb44d54ce2',
+)

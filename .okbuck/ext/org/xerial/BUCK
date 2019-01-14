@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'sqlite-jdbc.aar',
+    maven_coords = 'org.xerial:sqlite-jdbc:jar:3.20.1',
+    sha256 = '3d09ac1caebd6ea3bd82a1d1819a2cf6e251869dbaae43712caf6a65f40d40eb',
+)

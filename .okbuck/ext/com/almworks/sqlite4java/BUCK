@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'sqlite4java.jar',
+    maven_coords = 'com.almworks.sqlite4java:sqlite4java:jar:0.282',
+    sha256 = '9e1d8dd83ca6003f841e3af878ce2dc7c22497493a7bb6d1b62ec1b0d0a83c05',
+    sources_sha256 = '713d16ec49ad4b35728e4039e7387d9990bc6b9bb007518c2f629ede790ae152',
+)

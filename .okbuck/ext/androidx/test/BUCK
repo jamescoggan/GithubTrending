@@ -1,0 +1,22 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'monitor.aar',
+    maven_coords = 'androidx.test:monitor:aar:1.1.0',
+    sha256 = '0f08c6e9272b2647101af5da6d9bcea1f212db2adf2846efb2ef6a86a3ad0448',
+    sources_sha256 = 'f740cc2680a3ad4f4f65f11d6c5ba93abe8684d8e3b09642283d8d1f0203f9fd',
+)
+
+okbuck_prebuilt(
+    name = 'rules.aar',
+    maven_coords = 'androidx.test:rules:aar:1.1.0',
+    sha256 = '0c5c87df67b358c1a17765357138ea1d4bb58c61159ae635b4cb4dcaa3bb5986',
+    sources_sha256 = '644ab3c4a55fea00bc36c814ca52abf8d0aacc43a685ff80ae033c534ec18dcb',
+)
+
+okbuck_prebuilt(
+    name = 'runner.aar',
+    maven_coords = 'androidx.test:runner:aar:1.1.0',
+    sha256 = '80ac63609299116f4c1ffa5e206eb75eeac7006013880b47e5b09691a89b4045',
+    sources_sha256 = 'afa7547ea04e7f8314635f8f25459d0f72f952f52ba4281838ec273caaed64cc',
+)

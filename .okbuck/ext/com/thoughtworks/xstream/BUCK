@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'xstream.jar',
+    maven_coords = 'com.thoughtworks.xstream:xstream:jar:1.4.8',
+    sha256 = 'a219a1abf948400b669d08be73a6f9209fb720d237e5ff74c223bffe5f9df93d',
+    sources_sha256 = '5d956e4527d27420f2d417cd77ffafedad85ee795a59857bbf2be9cc630eace0',
+)

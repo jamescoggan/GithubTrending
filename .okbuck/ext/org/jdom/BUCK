@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'jdom2.jar',
+    maven_coords = 'org.jdom:jdom2:jar:2.0.6',
+    sha256 = '1345f11ba606d15603d6740551a8c21947c0215640770ec67271fe78bea97cf5',
+)

@@ -1,0 +1,25 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'lint-api.jar',
+    maven_coords = 'com.android.tools.lint:lint-api:jar:26.2.0',
+    sha256 = 'aa4dc0399b6ae602286b9b106c661b50f6a8e1143c5949d3e7fd93c4a4d1513d',
+)
+
+okbuck_prebuilt(
+    name = 'lint-checks.jar',
+    maven_coords = 'com.android.tools.lint:lint-checks:jar:26.2.0',
+    sha256 = 'c8c8dfdbd5c97a371e239b6000f4c6929bce315c2b13e690aaf34e3fcb045520',
+)
+
+okbuck_prebuilt(
+    name = 'lint-kotlin.jar',
+    maven_coords = 'com.android.tools.lint:lint-kotlin:jar:26.2.0',
+    sha256 = 'c149e09434aa24a6f7161dbd4b09f08c46f018cb0ee1ee2d1a32bf3b5015e081',
+)
+
+okbuck_prebuilt(
+    name = 'lint.jar',
+    maven_coords = 'com.android.tools.lint:lint:jar:26.2.0',
+    sha256 = '4df411ea5ef106780073c6e953ab591a55d52e94c9b1cd2f99970a124eca405e',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'slf4j-api.jar',
+    maven_coords = 'org.slf4j:slf4j-api:jar:1.6.4',
+    sha256 = '367b909030f714ee1176ab096b681e06348f03385e98d1bce0ed801b5452357e',
+    sources_sha256 = 'bd1a4463bf50c6aa6f843b59c61287db9086c7647368aedc0eff52d281c77f32',
+)

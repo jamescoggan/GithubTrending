@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'recyclerview.aar',
+    maven_coords = 'androidx.recyclerview:recyclerview:aar:1.0.0',
+    sha256 = '06956fb1ac014027ca9d2b40469a4b42aa61b4957bb11848e1ff352701ab4548',
+    sources_sha256 = '777ff6aaeb4c5fd8613c81320073d4e87e1e14067927fbf9633acfb62c7a9146',
+)

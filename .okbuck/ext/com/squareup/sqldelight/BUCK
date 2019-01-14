@@ -1,0 +1,16 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'android-driver.aar',
+    maven_coords = 'com.squareup.sqldelight:android-driver:aar:1.0.0-rc2',
+    sha256 = '6bbb8eb8247c619cc1d2798b14e0a9cb0de46fed094631b59c2b652f2768bb03',
+    sources_sha256 = '479556e75197ed40cf9e386d16dbc2b81b500a696bbec77ec2719e45a54bbe83',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'runtime-jvm.jar',
+    maven_coords = 'com.squareup.sqldelight:runtime-jvm:jar:1.0.0-rc2',
+    sha256 = '33da312b73d2cadeab66546c4dad0b48cbc625719d9a50ab4cebe979e074d3c5',
+    sources_sha256 = '05d8480525501d8fd50875cec72cbef8fde7b968834c172c7facd47091f4a43c',
+)

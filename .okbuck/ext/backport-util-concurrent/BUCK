@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'backport-util-concurrent.jar',
+    maven_coords = 'backport-util-concurrent:backport-util-concurrent:jar:3.1',
+    sha256 = 'f5759b7fcdfc83a525a036deedcbd32e5b536b625ebc282426f16ca137eb5902',
+    sources_sha256 = '1d59f461f2b89f2ae57563f753d555e30b209ada41eceb14c77c8c81b30e90b9',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'commons-collections.jar',
+    maven_coords = 'commons-collections:commons-collections:jar:3.2.1',
+    sha256 = '87363a4c94eaabeefd8b930cb059f66b64c9f7d632862f23de3012da7660047b',
+    sources_sha256 = '5bd4cfb6db784c74d344fd6c39801763e0bf5d553ae1e06d5357673f63883cec',
+)

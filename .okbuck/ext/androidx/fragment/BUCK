@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'fragment.aar',
+    maven_coords = 'androidx.fragment:fragment:aar:1.0.0',
+    sha256 = '65dd32d71fe65a32e77989a6cfb1ad09307038927f82a740c7611162d0b518f8',
+    sources_sha256 = 'b32d8a7b5530e7944df9a7a86e4a3f789eb83153383265f1928e9d51a9666224',
+)

@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'checker-compat-qual.jar',
+    maven_coords = 'org.checkerframework:checker-compat-qual:jar:2.3.0',
+    sha256 = '7b2ebd4c746231525a93912fd66055639fc6a8a9dc28392bc1e0ae239011d5fc',
+)

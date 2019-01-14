@@ -1,0 +1,13 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'constraintlayout.aar',
+    maven_coords = 'androidx.constraintlayout:constraintlayout:aar:1.1.0',
+    sha256 = '9bfa3c405d81247826f4a2145bcc7e981f40fa38ebfd90b8b08cf6f66cc4fb05',
+)
+
+okbuck_prebuilt(
+    name = 'constraintlayout-solver.jar',
+    maven_coords = 'androidx.constraintlayout:constraintlayout-solver:jar:1.1.0',
+    sha256 = '10b8a3390bc4cc827960f3b7016d1fe082b029e699e13ac85b0d495fd340c82e',
+)

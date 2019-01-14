@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'snappy-java.jar',
+    maven_coords = 'org.xerial.snappy:snappy-java:jar:1.0.5',
+    sha256 = 'b96966f2c1c70f5d62966d4e31df9a3e4ddd0ac30741802d1e89d8c05cbf1e98',
+    sources_sha256 = '7f063c2e7979564997657ad0bb7a0d7a4c358eb07a7ae78945f6916c6de4e392',
+)

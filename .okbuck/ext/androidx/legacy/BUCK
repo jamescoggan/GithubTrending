@@ -1,0 +1,15 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'legacy-support-core-ui.aar',
+    maven_coords = 'androidx.legacy:legacy-support-core-ui:aar:1.0.0',
+    sha256 = '0d1260c6e7e6a337f875df71b516931e703f716e90889817cd3a20fa5ac3d947',
+    sources_sha256 = '7dea025e3ced475e79e2c32841b778418b3ebc198e2bb5dd9c5c65653dd45872',
+)
+
+okbuck_prebuilt(
+    name = 'legacy-support-core-utils.aar',
+    maven_coords = 'androidx.legacy:legacy-support-core-utils:aar:1.0.0',
+    sha256 = 'a7edcf01d5b52b3034073027bc4775b78a4764bb6202bb91d61c829add8dd1c7',
+    sources_sha256 = 'dff5a95a7a706957b16edbf5b36c619fc869742bdf18845520d0cf71748c8070',
+)

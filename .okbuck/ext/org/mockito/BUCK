@@ -1,0 +1,22 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'mockito-core.jar',
+    maven_coords = 'org.mockito:mockito-core:jar:2.23.4',
+    sha256 = 'd77e018b6bc211d78ddcec54bc508732c4677b9a9eb9103793be85441b20bc5d',
+    sources_sha256 = '2e624439ee1de251c0e963a7183f47383eb67b29260d175ab6688675e05c9342',
+)
+
+okbuck_prebuilt(
+    name = 'mockito-junit-jupiter.jar',
+    maven_coords = 'org.mockito:mockito-junit-jupiter:jar:2.23.4',
+    sha256 = '93da180d1081d83164a9152094b7301c681ec7eed3f70df1de4f376f369090da',
+    sources_sha256 = '8d2d4b526060c05937c9cb5b98ba4bcc64f78fdfd5e00e1e6dfdc8058605d989',
+)
+
+okbuck_prebuilt(
+    name = 'mockito-inline.jar',
+    maven_coords = 'org.mockito:mockito-inline:jar:2.23.4',
+    sha256 = '490a6e0a3bebf1e3670269c6444fbcc1f5e8465c14934b9d3599d5f86f330213',
+    sources_sha256 = '09b7688a1848eb6e2361ac55cd21ec1945fcd76618e217d0f12fd6c7650f13b2',
+)

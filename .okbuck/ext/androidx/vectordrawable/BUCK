@@ -1,0 +1,15 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'vectordrawable-animated.aar',
+    maven_coords = 'androidx.vectordrawable:vectordrawable-animated:aar:1.0.0',
+    sha256 = '26c3a0cf0a9a9a7d235a0b00f2f37e431d52d9952751e3eb7c90b4b52c236cf1',
+    sources_sha256 = '822039ec11bf092e28b0b1d3229d2bdaf789615269ae12a6cd7a6879684633b1',
+)
+
+okbuck_prebuilt(
+    name = 'vectordrawable.aar',
+    maven_coords = 'androidx.vectordrawable:vectordrawable:aar:1.0.0',
+    sha256 = '507591926583875e3a0e6c46272235f323b4574759b5c02f0ab7a51d2ae7320d',
+    sources_sha256 = 'd2c003a856e93c6b16d1d6b52aa75f3b8ad53acf3afeec094308504bad3e71d6',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'velocity.jar',
+    maven_coords = 'org.apache.velocity:velocity:jar:1.7',
+    sha256 = 'ec92dae810034f4b46dbb16ef4364a4013b0efb24a8c5dd67435cae46a290d8e',
+    sources_sha256 = 'fb8079077f7ef9b4ee406b893d0e919f97fa468b3aa45782b341519f3ccbc2c2',
+)

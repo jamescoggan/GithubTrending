@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'haha.jar',
+    maven_coords = 'com.squareup.haha:haha:jar:2.0.3',
+    sha256 = '60d92c496b409b4faa910c649694113864bf63ec3773ba013bce7fe8c1854eee',
+    sources_sha256 = '09ab5fd4eb367b81439bf4d9eae7a57c5628867b910315f8494f2d1920d1c384',
+)

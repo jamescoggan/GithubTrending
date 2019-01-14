@@ -1,0 +1,9 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'xlog-android-idle.aar',
+    maven_coords = 'com.github.promeg:xlog-android-idle:aar:2.1.1',
+    sha256 = '3dd1bd0f2e6ccb6218a54b61e63bd66c348ceda51d621044b483b40abcb753a1',
+    sources_sha256 = '1aa40f42aecd3a6fc05f4c522d39802af78265e041fcd027eef4d5efc6fbeb37',
+    enable_jetifier = True,
+)

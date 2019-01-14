@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'animal-sniffer-annotations.jar',
+    maven_coords = 'org.codehaus.mojo:animal-sniffer-annotations:jar:1.14',
+    sha256 = '2068320bd6bad744c3673ab048f67e30bef8f518996fa380033556600669905d',
+)

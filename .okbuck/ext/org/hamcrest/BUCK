@@ -1,0 +1,22 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'hamcrest-core.jar',
+    maven_coords = 'org.hamcrest:hamcrest-core:jar:1.3',
+    sha256 = '66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9',
+    sources_sha256 = 'e223d2d8fbafd66057a8848cc94222d63c3cedd652cc48eddc0ab5c39c0f84df',
+)
+
+okbuck_prebuilt(
+    name = 'hamcrest-integration.jar',
+    maven_coords = 'org.hamcrest:hamcrest-integration:jar:1.3',
+    sha256 = '70f418efbb506c5155da5f9a5a33262ea08a9e4d7fea186aa9015c41a7224ac2',
+    sources_sha256 = '0827a37533a135bfab9c27e0f4b6d6fb1394856e842ef20a1693d3bfeb061365',
+)
+
+okbuck_prebuilt(
+    name = 'hamcrest-library.jar',
+    maven_coords = 'org.hamcrest:hamcrest-library:jar:1.3',
+    sha256 = '711d64522f9ec410983bd310934296da134be4254a125080a0416ec178dfad1c',
+    sources_sha256 = '1c0ff84455f539eb3c29a8c430de1f6f6f1ba4b9ab39ca19b195f33203cd539c',
+)

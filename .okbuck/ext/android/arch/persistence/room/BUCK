@@ -1,0 +1,71 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'room-runtine.aar',
+    maven_coords = 'android.arch.persistence.room:runtime:aar:1.0.0',
+    sha256 = '29e291f48708311ce9a9f2bb1b87bcee20282c5f9b8ffeedd0389a1fb417482a',
+)
+
+okbuck_prebuilt(
+    name = 'room-rxjava2.aar',
+    maven_coords = 'android.arch.persistence.room:rxjava2:aar:1.0.0',
+    sha256 = '7f448485044ad3f434c32ffbda78a0e0a794bb6a5b566b5f6bed61987ca0fddf',
+)
+
+okbuck_prebuilt(
+    name = 'room-common.jar',
+    maven_coords = 'android.arch.persistence.room:common:jar:1.0.0',
+    sha256 = '79bd49220d50c773882ef0e033c90c065fd5e5fd0eb16ca507dc8b3e78bd65f8',
+)
+
+okbuck_prebuilt(
+    name = 'room-compiler.jar',
+    maven_coords = 'android.arch.persistence.room:compiler:jar:1.0.0',
+    sha256 = 'ad4a990e3675375c7de72c20c3358967a13370fdfc7d59f62d21285d52946e3c',
+)
+
+okbuck_prebuilt(
+    name = 'room-migration.jar',
+    maven_coords = 'android.arch.persistence.room:migration:jar:1.0.0',
+    sha256 = 'f132f06116276e8333d7f02f1995f82f614d9e4bf61af9f7d1970c5bb521edb7',
+)
+
+java_annotation_processor(
+    name = 'room_kapt_compiler',
+    processor_classes = [
+        'android.arch.persistence.room.RoomProcessor',
+    ],
+    deps = [
+        '//.okbuck/ext/com/android/support:support-annotations.jar',
+        '//.okbuck/ext/com/android/support:support-compat.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-compiler.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-migration.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-common.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-runtine.aar',
+        '//.okbuck/ext/android/arch/persistence/db:db.aar',
+        '//.okbuck/ext/android/arch/persistence/db:db-framework.aar',
+        '//.okbuck/ext/com/google/auto:auto-common.jar',
+        '//.okbuck/ext/com/google/guava:guava.jar',
+        '//.okbuck/ext/com/squareup:javapoet.jar',
+        '//.okbuck/ext/org/antlr:antlr4.jar',
+        '//.okbuck/ext/org/xerial:sqlite-jdbc.aar',
+        '//.okbuck/ext/commons-codec:commons-codec.jar',
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/androidx/annotation:annotation.jar',
+        '//.okbuck/ext/com/google/code/findbugs:jsr305.jar',
+        '//.okbuck/ext/com/google/errorprone:error_prone_annotations.jar',
+        '//.okbuck/ext/com/google/errorprone:javac-shaded.jar',
+        '//.okbuck/ext/com/google/googlejavaformat:google-java-format.jar',
+        '//.okbuck/ext/com/google/j2objc:j2objc-annotations.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/checkerframework:checker-compat-qual.jar',
+        '//.okbuck/ext/org/codehaus/mojo:animal-sniffer-annotations.jar',
+#         '//.okbuck/ext/androidx/sqlite:sqlite-framework.aar',
+#         '//.okbuck/ext/androidx/sqlite:sqlite.aar',
+
+
+
+    ],
+    visibility = ['PUBLIC'],
+)

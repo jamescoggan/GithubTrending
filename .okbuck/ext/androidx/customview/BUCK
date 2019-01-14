@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'customview.aar',
+    maven_coords = 'androidx.customview:customview:aar:1.0.0',
+    sha256 = '20e5b8f6526a34595a604f56718da81167c0b40a7a94a57daa355663f2594df2',
+    sources_sha256 = '87c910a3c3c5d1e4881ebcc7a8f7fced04fdad6ff1f8e5ff7f100adf62df1787',
+)

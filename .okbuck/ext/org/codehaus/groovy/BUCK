@@ -1,0 +1,14 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'groovy-all.jar',
+    maven_coords = 'org.codehaus.groovy:groovy-all:jar:2.4.7',
+    sha256 = '688f42c55454bf48ff0f293cc6320ed703c0c861c8e5d903c35d3b3f85b0029e',
+    sources_sha256 = '4616c3ec696cbc84c9808958d42c2f75d177353be62ce6f058850fc69bf2ea4e',
+)
+
+okbuck_prebuilt(
+    name = 'groovy.jar',
+    maven_coords = 'org.codehaus.groovy:groovy:jar:2.4.15',
+    sha256 = '2205b6649976295bc24a751b1f7b5192e9d28d3815efe39505de8dbbb99ed952',
+)

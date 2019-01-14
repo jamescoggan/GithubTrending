@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'commons-lang.jar',
+    maven_coords = 'commons-lang:commons-lang:jar:2.4',
+    sha256 = '2c73b940c91250bc98346926270f13a6a10bb6e29d2c9316a70d134e382c873e',
+    sources_sha256 = '8ceb33a5122d6540ebb90f114e9d52979cc364ab3ece2435a6df25c7b5b2e955',
+)

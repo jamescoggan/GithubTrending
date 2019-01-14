@@ -1,0 +1,15 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'byte-buddy-agent.jar',
+    maven_coords = 'net.bytebuddy:byte-buddy-agent:jar:1.7.9',
+    sha256 = 'ac1a993befb528c3271a83a9ad9c42d363d399e9deb26e0470e3c4962066c550',
+    sources_sha256 = 'a5cbce7bde2585e886c0c51fc6285fdecaf1f85d57f7b3dd83e9a2fc67d9292a',
+)
+
+okbuck_prebuilt(
+    name = 'byte-buddy.jar',
+    maven_coords = 'net.bytebuddy:byte-buddy:jar:1.7.9',
+    sha256 = '2ea2ada12b790d16ac7f6e6c065cb55cbcdb6ba519355f5958851159cad3b16a',
+    sources_sha256 = '30afc4487a757d05cd33e15d8480c109b6eba84fbe67e5d16fd4a57be279146f',
+)

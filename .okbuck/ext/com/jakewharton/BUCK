@@ -1,0 +1,31 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'butterknife-runtime.aar',
+    maven_coords = 'com.jakewharton:butterknife-runtime:aar:10.0.0',
+    sha256 = 'e9621ec63a30265b623aa1ffb10982ba2f0ba0779babdb3b90703810822c0347',
+    sources_sha256 = '21c12f1ac11111986990136bc147e2b200d67a0ef9fa66155d2f44f4becc4e1e',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'butterknife.aar',
+    maven_coords = 'com.jakewharton:butterknife:aar:10.0.0',
+    sha256 = 'dca9a383c48aa2f7a6bb6e4103ee755e2dc3f958f53865afe49ea33048477eda',
+    sources_sha256 = 'da58c30cf2e5c7f4a2c725b2a670b201393caba6845ec5bd3df09d14b9a7fc27',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'butterknife-annotations.jar',
+    maven_coords = 'com.jakewharton:butterknife-annotations:jar:10.0.0',
+    sha256 = 'c3e51f85abe6925e224cc31d1a64e079677173ef275006635f6fb2ba3d3054b7',
+    sources_sha256 = '2f5d5d2f56d27f40f11a7668146f5d7f8b1996e3ac91152bb9940e4a7a28e205',
+)
+
+okbuck_prebuilt(
+    name = 'butterknife-compiler.jar',
+    maven_coords = 'com.jakewharton:butterknife-compiler:jar:10.0.0',
+    sha256 = '42674987b0f91fea246498f279d36d3377d4c8378a6be6cfde1ca0ebecdb1aba',
+    sources_sha256 = 'beaf869a38fdc38c7ea9bc7775c81d4373f0f688413ab1722a5d7a4afe64f69d',
+)

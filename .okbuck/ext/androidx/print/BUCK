@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'print.aar',
+    maven_coords = 'androidx.print:print:aar:1.0.0',
+    sha256 = '1d5c7f3135a1bba661fc373fd72e11eb0a4adbb3396787826dd8e4190d5d9edd',
+    sources_sha256 = '659b6e2047484dbae409b9b49c19f9ebd9540bb7ef3610438e2c2b15064fc217',
+)

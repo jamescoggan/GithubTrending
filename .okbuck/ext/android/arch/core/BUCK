@@ -1,0 +1,13 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'core-testing.jar',
+    maven_coords = 'android.arch.core:core-testing:aar:1.1.1',
+    sha256 = '150a6f028af6c57ca6de66cb185a135cdcf737f597443acc4cf8aeeec064fff3',
+)
+
+okbuck_prebuilt(
+    name = 'runtime.jar',
+    maven_coords = 'android.arch.core:runtime:aar:1.1.1',
+    sha256 = 'c3215aa5873311b3f88a6f4e4a3c25ad89971bc127de8c3e1291c57f93a05c39',
+)

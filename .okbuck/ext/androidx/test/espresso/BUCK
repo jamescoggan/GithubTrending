@@ -1,0 +1,15 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'espresso-core.aar',
+    maven_coords = 'androidx.test.espresso:espresso-core:aar:3.1.0',
+    sha256 = 'af9c385fb753e4ee9f7def800dbbc4a25841bec95727e3ef30e9d04d76b73fe9',
+    sources_sha256 = '3c213555e35e5f0c4ef672f882810102cd678b1df58dc21d4873f8cebbdce1c8',
+)
+
+okbuck_prebuilt(
+    name = 'espresso-idling-resource.aar',
+    maven_coords = 'androidx.test.espresso:espresso-idling-resource:aar:3.1.0',
+    sha256 = 'c1a6a7add4f5d51627539fb8875a6cc3285d51638f6d638ee32f58254861f482',
+    sources_sha256 = '2fc10d44ede64066fcf3d4d4dc4fd6428199ba914ea34ceb0cdac7fa62e6300a',
+)

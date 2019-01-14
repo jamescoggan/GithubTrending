@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'localbroadcastmanager.aar',
+    maven_coords = 'androidx.localbroadcastmanager:localbroadcastmanager:aar:1.0.0',
+    sha256 = 'e71c328ceef5c4a7d76f2d86df1b65d65fe2acf868b1a4efd84a3f34336186d8',
+    sources_sha256 = '952b8567a76d6484aa96f9712b9dc90f21b83a73e2496daf243e2e1adfb65dd4',
+)

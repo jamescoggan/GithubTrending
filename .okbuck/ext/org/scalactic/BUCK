@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'scalactic_2.12.jar',
+    maven_coords = 'org.scalactic:scalactic_2.12:jar:3.0.5',
+    sha256 = '57e25b4fd969b1758fe042595112c874dfea99dca5cc48eebe07ac38772a0c41',
+    sources_sha256 = '0455eaecaa2b8ce0be537120c2ccd407c4606cbe53e63cb6a7fc8b31b5b65461',
+)

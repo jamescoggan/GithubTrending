@@ -1,0 +1,66 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'dagger-android-support.aar',
+    maven_coords = 'com.google.dagger:dagger-android-support:aar:2.16',
+    sha256 = '40d09004cf9edcc5f162487426cbed82b5050afecd6d03dcc5bb9f60644fd489',
+    sources_sha256 = '461ce45ae3314da380efd7280fdc66d1bf5bc4308dbac0d8e81ec11c5dec1fd6',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'dagger-android.aar',
+    maven_coords = 'com.google.dagger:dagger-android:aar:2.16',
+    sha256 = '414a2f6fb7c670a7d4803f27c576de22c30861b86f1ebec3b5c41c4bd93e9728',
+    sources_sha256 = '73351bb64cd9c981b94e86fef847a8a85251d6db5d1187155f5fee8078c7d773',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'dagger-android-jarimpl.jar',
+    maven_coords = 'com.google.dagger:dagger-android-jarimpl:jar:2.16',
+    sha256 = '4c4d4b873fb802f96e7595296178855151c49e2bae3d64c750adeeec05f42717',
+    sources_sha256 = '73351bb64cd9c981b94e86fef847a8a85251d6db5d1187155f5fee8078c7d773',
+)
+
+okbuck_prebuilt(
+    name = 'dagger-android-processor.jar',
+    maven_coords = 'com.google.dagger:dagger-android-processor:jar:2.16',
+    sha256 = 'dc0957a778e33541ca521a741742ef75b8626fa3f1e0594a0a6f2e617e080493',
+    sources_sha256 = 'ae7bf1907309a2afe96a3ef428a046bd3e4d88d5e98e76f8ae3ea55fdf4eb366',
+)
+
+okbuck_prebuilt(
+    name = 'dagger-android-support-jarimpl.jar',
+    maven_coords = 'com.google.dagger:dagger-android-support-jarimpl:jar:2.16',
+    sha256 = '78af92eecaa8474dcab676f8a4dfc06c6d1ed506b30ae25dd258fda6da2de085',
+    sources_sha256 = '461ce45ae3314da380efd7280fdc66d1bf5bc4308dbac0d8e81ec11c5dec1fd6',
+)
+
+okbuck_prebuilt(
+    name = 'dagger-compiler.jar',
+    maven_coords = 'com.google.dagger:dagger-compiler:jar:2.16',
+    sha256 = '723dca807605ddc82cd86c4e334493789ad7fb3fe863b264a8853611c89baf3d',
+    sources_sha256 = '05dbe0867bd1efce9a446359d30a0ad2bfe0407b1afd2b31a3058944d2bf3a7d',
+)
+
+okbuck_prebuilt(
+    name = 'dagger-producers.jar',
+    maven_coords = 'com.google.dagger:dagger-producers:jar:2.16',
+    sha256 = '97737907bde6e94cfa90883fa2a8ff4765400b9561bdcb4d83fe475ddbaf22af',
+    sources_sha256 = '93838ce482666e54ed7a10d97558db99fce7c761392db44c259805e66664f384',
+)
+
+okbuck_prebuilt(
+    name = 'dagger-spi.jar',
+    maven_coords = 'com.google.dagger:dagger-spi:jar:2.16',
+    sha256 = '1b14f73b7c1088ab399f9fcf9f98aecba7a51d9fbfeeb63c1ad5dab9aadbef86',
+    sources_sha256 = '62442cb1017f3498a2e2528fe5ac5d965f51e65090fa21cf0df01fa240e1ab07',
+)
+
+okbuck_prebuilt(
+    name = 'dagger.jar',
+    maven_coords = 'com.google.dagger:dagger:jar:2.16',
+    sha256 = '1d67ef12bb90bf68f6146f6b51f30a2e965277a53bee6da931c8fa163de29615',
+    sources_sha256 = 'b131c5e094cde112217abbb3123e37ba5b80e74bed2debd3a3b567251179a898',
+)

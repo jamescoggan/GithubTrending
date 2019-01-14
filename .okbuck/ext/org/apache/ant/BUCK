@@ -1,0 +1,14 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'ant-launcher.jar',
+    maven_coords = 'org.apache.ant:ant-launcher:jar:1.8.0',
+    sha256 = 'da9fd92eacdf63daf0be52eb71accc10ff7943a85d7aac9ea96cf7e03ee3d3cc',
+)
+
+okbuck_prebuilt(
+    name = 'ant.jar',
+    maven_coords = 'org.apache.ant:ant:jar:1.8.0',
+    sha256 = '0251dbb938740ace07a53675113eee753ba389db65aebc814b175af50321620e',
+    sources_sha256 = 'c243abb3ac15f0616d2f8582e4e9a7da0e7097013e4398fa96c1d4489e298758',
+)

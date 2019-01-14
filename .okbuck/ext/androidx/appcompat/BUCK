@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'appcompat.aar',
+    maven_coords = 'androidx.appcompat:appcompat:aar:1.0.0',
+    sha256 = '994254e12036cbd3326b2819a4d8bc3bef139f45022cfb0b1086dc58d36d56ce',
+    sources_sha256 = 'af79734bd479ee3590288227059d43093cc37dc74f7a47cfa05a7c88904f3b2d',
+)

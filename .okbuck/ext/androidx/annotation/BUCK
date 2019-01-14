@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'annotation.jar',
+    maven_coords = 'androidx.annotation:annotation:jar:1.0.0',
+    sha256 = '0baae9755f7caf52aa80cd04324b91ba93af55d4d1d17dcc9a7b53d99ef7c016',
+    sources_sha256 = 'd62c9f518732b72c4ffae5dc05acb11f05a2ca0bdb50a31aeb979271fc115a6f',
+)

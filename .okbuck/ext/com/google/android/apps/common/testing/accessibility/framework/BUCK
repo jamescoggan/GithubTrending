@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'accessibility-test-framework.jar',
+    maven_coords = 'com.google.android.apps.common.testing.accessibility.framework:accessibility-test-framework:jar:2.1',
+    sha256 = '7b0aa6ed7553597ce0610684a9f7eca8021eee218f2e2f427c04a7fbf5f920bd',
+    sources_sha256 = '552cc6c7814ea84e9cdd550f4b4216bd9d743457b632c93a56e8d6ccae4ab5f0',
+)

@@ -1,6 +1,6 @@
 package co.joebirch.cache.dao
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule
+import  android.arch.core.executor.testing.InstantTaskExecutorRule
 import android.arch.persistence.room.Room
 import co.joebirch.cache.db.ProjectsDatabase
 import co.joebirch.cache.test.factory.ConfigDataFactory

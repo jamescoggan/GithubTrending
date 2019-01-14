@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'javax.activation.jar',
+    maven_coords = 'com.sun.activation:javax.activation:jar:1.2.0',
+    sha256 = '993302b16cd7056f21e779cc577d175a810bb4900ef73cd8fbf2b50f928ba9ce',
+)

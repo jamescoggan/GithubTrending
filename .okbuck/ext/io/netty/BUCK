@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'netty.jar',
+    maven_coords = 'io.netty:netty:jar:3.4.0.Final',
+    sha256 = 'f66e3bc53b9f1b8c1b8540fd865593f668745b8e206f7b5c3f9963f2f28f66aa',
+    sources_sha256 = 'fd0c617634ca61a5e32d166fc85e5debafb7efb15486f0462ae987301b97ecfd',
+)

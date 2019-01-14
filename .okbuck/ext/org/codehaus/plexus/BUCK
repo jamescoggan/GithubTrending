@@ -1,0 +1,22 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'plexus-container-default.jar',
+    maven_coords = 'org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1',
+    sha256 = '7c758612888782ccfe376823aee7cdcc7e0cdafb097f7ef50295a0b0c3a16edf',
+    sources_sha256 = '330e1bf490259c64fd6b27097adb8d41159500f849743b8680f3515044483d62',
+)
+
+okbuck_prebuilt(
+    name = 'plexus-interpolation.jar',
+    maven_coords = 'org.codehaus.plexus:plexus-interpolation:jar:1.11',
+    sha256 = 'fd9507feb858fa620d1b4aa4b7039fdea1a77e09d3fd28cfbddfff468d9d8c28',
+    sources_sha256 = '92e960ff19db5b1f8cd399d20bd52c2dd3c81c080029f2a9b7c77e077d0b0d83',
+)
+
+okbuck_prebuilt(
+    name = 'plexus-utils.jar',
+    maven_coords = 'org.codehaus.plexus:plexus-utils:jar:1.5.15',
+    sha256 = '2ca121831e597b4d8f2cb22d17c5c041fc23a7777ceb6bfbdd4dfb34bbe7d997',
+    sources_sha256 = '40d453ed0bd9b97aee7a1f3a875eb3e73c4b57288f7a8972b3522a5b9aced841',
+)

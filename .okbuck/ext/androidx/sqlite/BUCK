@@ -1,0 +1,15 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'sqlite-framework.aar',
+    maven_coords = 'androidx.sqlite:sqlite-framework:aar:2.0.0-rc01',
+    sha256 = '5bbab9fd586c95082a17bb06246948bf29421885aed63fabc4ec7bc2da613fa4',
+    sources_sha256 = '577796f9443d57bfdcce1dcbf2b273030444558093696917e4fe1f6d38f6fb71',
+)
+
+okbuck_prebuilt(
+    name = 'sqlite.aar',
+    maven_coords = 'androidx.sqlite:sqlite:aar:2.0.0-rc01',
+    sha256 = '922e29003821b619b6ecdbdf9bbfb58885974393085cc5f6de67ce86cca5790c',
+    sources_sha256 = 'a51d64d10f56510402ea72bf3e5f802747d91fe2a7b30519fc46f2f7da5561a6',
+)

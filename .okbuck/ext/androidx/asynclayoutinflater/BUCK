@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'asynclayoutinflater.aar',
+    maven_coords = 'androidx.asynclayoutinflater:asynclayoutinflater:aar:1.0.0',
+    sha256 = 'f7eab60c57addd94bb06275832fe7600611beaaae1a1ec597c231956faf96c8b',
+    sources_sha256 = 'a4686cc131c54a6f3e868c8de2afb3ae8d239e2556c1d9d61f5ce4a3455d0cc4',
+)

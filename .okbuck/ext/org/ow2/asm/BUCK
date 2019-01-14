@@ -1,0 +1,31 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'asm-analysis.jar',
+    maven_coords = 'org.ow2.asm:asm-analysis:jar:6.0',
+    sha256 = '2f1a6387219c3a6cc4856481f221b03bd9f2408a326d416af09af5d6f608c1f4',
+)
+
+okbuck_prebuilt(
+    name = 'asm-commons.jar',
+    maven_coords = 'org.ow2.asm:asm-commons:jar:6.0',
+    sha256 = 'f1bce5c648a96a017bdcd01fe5d59af9845297fd7b79b81c015a6fbbd9719abf',
+)
+
+okbuck_prebuilt(
+    name = 'asm-tree.jar',
+    maven_coords = 'org.ow2.asm:asm-tree:jar:6.0',
+    sha256 = '887998fb69727c8759e4d253f856822801e33f9fd4caa566b3ac58ee92106215',
+)
+
+okbuck_prebuilt(
+    name = 'asm-util.jar',
+    maven_coords = 'org.ow2.asm:asm-util:jar:6.0',
+    sha256 = '356afebdb0f870175262e5188f8709a3b17aa2a5a6a4b0340b04d4b449bca5f6',
+)
+
+okbuck_prebuilt(
+    name = 'asm.jar',
+    maven_coords = 'org.ow2.asm:asm:jar:6.0',
+    sha256 = 'dd8971c74a4e697899a8e95caae4ea8760ea6c486dc6b97b1795e75760420461',
+)

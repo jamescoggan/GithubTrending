@@ -1,0 +1,22 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'core-runtime.aar',
+    maven_coords = 'androidx.arch.core:core-runtime:aar:2.0.0',
+    sha256 = '87e65fc767c712b437649c7cee2431ebb4bed6daef82e501d4125b3ed3f65f8e',
+    sources_sha256 = '8bcdf8dd52ec0f36c7ff2592a56e1e8802713d8dd1314a036b428d86463859da',
+)
+
+okbuck_prebuilt(
+    name = 'core-common.jar',
+    maven_coords = 'androidx.arch.core:core-common:jar:2.0.0',
+    sha256 = '4b80b337779b526e64b0ee0ca9e0df43b808344d145f8e9b1c42a134dac57ad8',
+    sources_sha256 = '0321dc07683a12b333040592c90fa023aca04d0df42af740798c0f745c788c73',
+)
+
+okbuck_prebuilt(
+    name = 'core-testing.aar',
+    maven_coords = 'androidx.arch.core:core-testing:aar:2.0.0',
+    sha256 = 'e1415f310d94b1d287e6bf5aa2e85c1a0d48e3a09c79e493295ef06f781e1dbe',
+    sources_sha256 = '0be98d9920d39e165dc89050ec87e74426ae2900411c49250f7a6e2529205468',
+)

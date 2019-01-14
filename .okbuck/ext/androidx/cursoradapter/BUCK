@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'cursoradapter.aar',
+    maven_coords = 'androidx.cursoradapter:cursoradapter:aar:1.0.0',
+    sha256 = 'a81c8fe78815fa47df5b749deb52727ad11f9397da58b16017f4eb2c11e28564',
+    sources_sha256 = '99b72a3aec8c9edfd9de20f5913ce4c413bca2f0cf9877b504e26aa03ef50323',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'google-java-format.jar',
+    maven_coords = 'com.google.googlejavaformat:google-java-format:jar:1.4',
+    sha256 = '39d18ec9ab610097074bf49e971285488eaf5d0bc2369df0a0d5a3f9f9de2faa',
+    sources_sha256 = '4495352c9c9ac633c25c198cf23c0cd5ef56c5b3ffd911207748198ba8775a07',
+)

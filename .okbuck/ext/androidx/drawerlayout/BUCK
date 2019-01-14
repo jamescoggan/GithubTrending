@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'drawerlayout.aar',
+    maven_coords = 'androidx.drawerlayout:drawerlayout:aar:1.0.0',
+    sha256 = '9402442cdc5a43cf62fb14f8cf98c63342d4d9d9b805c8033c6cf7e802749ac1',
+    sources_sha256 = '3702e90acc99c16d192eada8467aea9595d1c3fff3e2155ffe66e5f31e334513',
+)

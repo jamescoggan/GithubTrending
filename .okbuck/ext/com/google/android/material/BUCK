@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'material.aar',
+    maven_coords = 'com.google.android.material:material:aar:1.0.0',
+    sha256 = '7680e381a3c03798d999b2e441caadd8a56a0a808e108024a67af9fe26c11adc',
+    enable_jetifier = True,
+)

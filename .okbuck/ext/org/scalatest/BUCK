@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'scalatest_2.12.jar',
+    maven_coords = 'org.scalatest:scalatest_2.12:jar:3.0.5',
+    sha256 = 'b416b5bcef6720da469a8d8a5726e457fc2d1cd5d316e1bc283aa75a2ae005e5',
+    sources_sha256 = '22081ee83810098adc9af4d84d05dd5891d7c0e15f9095bcdaf4ac7a228b92df',
+)

@@ -1,0 +1,14 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'error_prone_annotations.jar',
+    maven_coords = 'com.google.errorprone:error_prone_annotations:jar:2.1.3',
+    sha256 = '03d0329547c13da9e17c634d1049ea2ead093925e290567e1a364fd6b1fc7ff8',
+)
+
+okbuck_prebuilt(
+    name = 'javac-shaded.jar',
+    maven_coords = 'com.google.errorprone:javac-shaded:jar:9-dev-r4023-3',
+    sha256 = '65bfccf60986c47fbc17c9ebab0be626afc41741e0a6ec7109e0768817a36f30',
+    sources_sha256 = 'cf0fde1aad77ac6e0e2d36a9f9179193ae1707088ba00ffa91fcfb5269304a6a',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'swiperefreshlayout.aar',
+    maven_coords = 'androidx.swiperefreshlayout:swiperefreshlayout:aar:1.0.0',
+    sha256 = '9761b3a809c9b093fd06a3c4bbc645756dec0e95b5c9da419bc9f2a3f3026e8d',
+    sources_sha256 = 'c63fdf41a4cfd9ae1f17a619951f395432af43842f684eaadbc2584df4a048d5',
+)

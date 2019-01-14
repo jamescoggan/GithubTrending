@@ -1,0 +1,117 @@
+lib_deps = [
+]
+
+kotlin_library(
+    name = 'src_main',
+    srcs = glob([
+        'src/main/java/**/*.java',
+        'src/main/java/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    tests = [
+        ':test_main',
+    ],
+    plugins = [
+    #         '//.okbuck/workspace/processor:processor_com.google.dagger-dagger-compiler-2.16',
+    ],
+    extra_arguments = [
+        '-proc:none',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+        '-Werror',
+        '-Xjsr305=strict',
+    ],
+    maven_coords = 'okbuck.libraries:kotlinlibrary:unspecified',
+    deps = [
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Domain:src_main',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = [
+]
+
+kotlin_test(
+    name = 'test_main',
+    srcs = glob([
+        'src/test/java/**/*.java',
+        'src/test/java/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    plugins = [
+    #         '//.okbuck/workspace/processor:processor_com.google.dagger-dagger-compiler-2.16',
+    ],
+    extra_arguments = [
+        '-proc:none',
+    ],
+    extra_kotlinc_arguments = [
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+        '-Werror',
+        '-Xjsr305=strict',
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+    #         '-P',
+    #         'plugin:org.jetbrains.kotlin.allopen:annotation=demo.Anno',
+    #         '-P',
+    #         'plugin:org.jetbrains.kotlin.allopen:annotation=demo.Anno2',
+    #         '-Xfriend-paths=buck-out/gen/libraries/kotlinlibrary/lib__src_main__output/src_main.jar',
+    ],
+    vm_args = [
+        '-Dfile.encoding=UTF-8',
+        '-Duser.country=GB',
+        '-Duser.language=en',
+        '-Duser.variant',
+        '-ea',
+    ],
+    deps = [
+        ':src_main',
+        '//.okbuck/ext/com/nhaarman:mockito-kotlin.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/junit:junit.jar',
+        '//.okbuck/ext/net/bytebuddy:byte-buddy-agent.jar',
+        '//.okbuck/ext/net/bytebuddy:byte-buddy.jar',
+        '//.okbuck/ext/org/hamcrest:hamcrest-core.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test-annotations-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test-junit.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test.jar',
+        '//.okbuck/ext/org/mockito:mockito-core.jar',
+        '//.okbuck/ext/org/objenesis:objenesis.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Domain:src_main',
+    ],
+    labels = [
+        'unit',
+        'java',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)

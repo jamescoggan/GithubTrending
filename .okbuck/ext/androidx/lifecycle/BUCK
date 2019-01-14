@@ -1,0 +1,36 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'lifecycle-livedata-core.aar',
+    maven_coords = 'androidx.lifecycle:lifecycle-livedata-core:aar:2.0.0',
+    sha256 = 'fde334ec7e22744c0f5bfe7caf1a84c9d717327044400577bdf9bd921ec4f7bc',
+    sources_sha256 = 'd6ca1efd8da4018aa03939ced96a3f6b0144b9f7a22395c1f58eec78f9f3732a',
+)
+
+okbuck_prebuilt(
+    name = 'lifecycle-livedata.aar',
+    maven_coords = 'androidx.lifecycle:lifecycle-livedata:aar:2.0.0',
+    sha256 = 'c82609ced8c498f0a701a30fb6771bb7480860daee84d82e0a81ee86edf7ba39',
+    sources_sha256 = '7a5dff9e790bf49f3d90737b00bbeb2092e28ad36d695a9071cf65b80a977f3d',
+)
+
+okbuck_prebuilt(
+    name = 'lifecycle-runtime.aar',
+    maven_coords = 'androidx.lifecycle:lifecycle-runtime:aar:2.0.0',
+    sha256 = 'e4afc9e636183f6f3e0edf1cf46121a492ffd2c673075bb07f55c7a99dd43cfb',
+    sources_sha256 = '472d99cf093b3b65d24a5707138ce51b160eb81a0ed59095ca8c8e0883ab1524',
+)
+
+okbuck_prebuilt(
+    name = 'lifecycle-viewmodel.aar',
+    maven_coords = 'androidx.lifecycle:lifecycle-viewmodel:aar:2.0.0',
+    sha256 = 'd6460aea1b6bad80ab14cf88297e9e43bfde8d87c3e5c28f2c508233ffbcc062',
+    sources_sha256 = '543e0684b57327377751d1f7cc007dedd512d8de5e8f048ab3f56121061313a0',
+)
+
+okbuck_prebuilt(
+    name = 'lifecycle-common.jar',
+    maven_coords = 'androidx.lifecycle:lifecycle-common:jar:2.0.0',
+    sha256 = '7bad7a188804adea6fa1f35d5ef99b705f20bd93ecadde484760ff86b535fefc',
+    sources_sha256 = '8e85da54078b60444cffe7c581e1efd82942eb519db682046f26ff7d7b868065',
+)

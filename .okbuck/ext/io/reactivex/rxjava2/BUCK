@@ -1,0 +1,23 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'rxandroid.aar',
+    maven_coords = 'io.reactivex.rxjava2:rxandroid:aar:2.0.2',
+    sha256 = '3f3f48162733ca0cf23c3a62a46ca511149c8698d1a07d50e8c878671e1a2ff9',
+    sources_sha256 = 'f1ec052d6c2d0db0f628c1959862ef1a0c12bc74814b8ee45332c108ae566ec6',
+    enable_jetifier = True,
+)
+
+okbuck_prebuilt(
+    name = 'rxjava.jar',
+    maven_coords = 'io.reactivex.rxjava2:rxjava:jar:2.1.12',
+    sha256 = 'e2e92098916153c45e4e1bdf5114218ee4e380b04891b72d87ac179494b78c48',
+    sources_sha256 = 'a7d5a7105a46cd768852f80bdf51b955ce4d2a81399d13864a74eb01b1eb8448',
+)
+
+okbuck_prebuilt(
+    name = 'rxkotlin.jar',
+    maven_coords = 'io.reactivex.rxjava2:rxjava:jar:2.0.2',
+    sha256 = '7a3047e4930db17800c167e82e7c85cc53c38f357aeb89f3d42f993e70b106c1',
+    sources_sha256 = '2b835d3e9d6180c0837e89460175178ec32a65410d438b7c6621e677673689a1',
+)

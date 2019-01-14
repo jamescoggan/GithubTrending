@@ -1,0 +1,13 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'okhttp.jar',
+    maven_coords = 'com.squareup.okhttp3:okhttp:jar:3.8.1',
+    sha256 = 'c1d57f913f74f61d424d4250a92723ba9a61affc12a0ab194d84cc179b472841',
+)
+
+okbuck_prebuilt(
+    name = 'okhttp-logging-interceptor.jar',
+    maven_coords = 'com.squareup.okhttp3:logging-interceptor:jar:3.8.1',
+    sha256 = '1e84fce63c46ce41fb7f8ca65d5b67ffe61aa0350e964288e66391fda7399ff8',
+)

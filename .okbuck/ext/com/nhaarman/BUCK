@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'mockito-kotlin.jar',
+    maven_coords = 'com.nhaarman:mockito-kotlin:jar:1.5.0',
+    sha256 = '33a1d2eb3b6ec4d82cff85b651fbb3e6b4dd0ef6a6399da94cc8b3246381cf86',
+    sources_sha256 = '70daa236d074c30205189baeff5230287af84ac35685fb17b7d3bae59f7eec4f',
+)

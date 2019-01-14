@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'guava.jar',
+    maven_coords = 'com.google.guava:guava:jar:24.0-jre',
+    sha256 = 'e0274470b16ba1154e926b5f54ef8ae159197fbc356406bda9b261ba67e3e599',
+)

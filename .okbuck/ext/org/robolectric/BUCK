@@ -1,0 +1,69 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'android-all-5.0.2_r3-robolectric-r0.jar',
+    maven_coords = 'org.robolectric:android-all:jar:5.0.2_r3-robolectric-r0',
+    sha256 = '5e63d4c7f2c691afed648bf0675e0b0a76d19f0e23d93705f4faf9ed3b2734de',
+)
+
+okbuck_prebuilt(
+    name = 'android-all-8.1.0-robolectric-4611349.jar',
+    maven_coords = 'org.robolectric:android-all:jar:8.1.0-robolectric-4611349',
+    sha256 = '01b3364bc0b4ca099929aa4d818529c7ec05e18b9e4c1e667f99955b16ae19b4',
+)
+
+okbuck_prebuilt(
+    name = 'annotations.jar',
+    maven_coords = 'org.robolectric:annotations:jar:4.1',
+    sha256 = '969db9163e274fa9c882f484ac017d92f6ef1aad891a319919f3a51c8abb418b',
+    sources_sha256 = '06ea2b7ff2f5a9d402df4d4dd684d9ccc1108e56930c85e6e4937ae5ad4f5cff',
+)
+
+okbuck_prebuilt(
+    name = 'junit.jar',
+    maven_coords = 'org.robolectric:junit:jar:4.1',
+    sha256 = 'e86dfbe89fce5a15691b20648a83baf19b347c419680cf24bdacfe5f0b0c4a76',
+    sources_sha256 = '3127305e545bc19c329821d1187b1d4dc62953d6d2853f67aab56c3f951c22a0',
+)
+
+okbuck_prebuilt(
+    name = 'resources.jar',
+    maven_coords = 'org.robolectric:resources:jar:4.1',
+    sha256 = '8127db56b7ace08ccd230ea42196d6f663308f3a292f327d832e013e5ad4c5db',
+    sources_sha256 = 'dc94709616d34c315fa74127bd1cf7a84bff3d9041dc0e8625803e5783074f59',
+)
+
+okbuck_prebuilt(
+    name = 'robolectric.jar',
+    maven_coords = 'org.robolectric:robolectric:jar:4.1',
+    sha256 = '26a1a24fd7054bcd0df5e0480ac8dc90b3b04bfacf6aec70e851156e05fa0486',
+    sources_sha256 = '40ed5c69359a3a53846acb84fe3c6bb793d174b470f0bd13961a11dd218454a2',
+)
+
+okbuck_prebuilt(
+    name = 'sandbox.jar',
+    maven_coords = 'org.robolectric:sandbox:jar:4.1',
+    sha256 = '69b7567d22c5b4159e71e6252e9cd8e27160dd495eacb97fcb25a84dbafba598',
+    sources_sha256 = 'c5cf1b69e9b118d14374f8ddd3be04a09a187fb6fb5b989f8bfddd9234d8fd56',
+)
+
+okbuck_prebuilt(
+    name = 'shadowapi.jar',
+    maven_coords = 'org.robolectric:shadowapi:jar:4.1',
+    sha256 = '344ded657d84e5b2f3642851d422bf0405ea6912ae7d916a78e3c8c1b5384a0c',
+    sources_sha256 = 'ad28cb3fe285db398089028a8d339877762a328251c10db4c4afd45bdd0ca56c',
+)
+
+okbuck_prebuilt(
+    name = 'shadows-framework.jar',
+    maven_coords = 'org.robolectric:shadows-framework:jar:4.1',
+    sha256 = 'd1267c42be5ed48fb4089804692e727f24281cc9a3ac39425b7d4e52ab93c8c6',
+    sources_sha256 = '41a5549ac46c25535fef0a68eb7538f5a1c1fc796c1bdbe1609aca9e05d948d1',
+)
+
+okbuck_prebuilt(
+    name = 'utils.jar',
+    maven_coords = 'org.robolectric:utils:jar:4.1',
+    sha256 = '392469314016d1847d3fca7010ba2b625b1b0cca36bfa03d0782c435b1ac5adb',
+    sources_sha256 = '5ec621c44f08a8167300a178e0d64ab1fb13e9fc206e8f4fed86c609067f5a63',
+)

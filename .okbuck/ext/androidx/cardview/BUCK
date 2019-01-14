@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'cardview.aar',
+    maven_coords = 'androidx.cardview:cardview:aar:1.0.0',
+    sha256 = '1193c04c22a3d6b5946dae9f4e8c59d6adde6a71b6bd5d87fb99d82dda1afec7',
+    sources_sha256 = 'ad7a28e7768893f8b33a8b7b275a92e33c125243ca4a9130a984c40e578e19b4',
+)

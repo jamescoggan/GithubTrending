@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_targets.bzl', 'okbuck_prebuilt_jar')
+
+okbuck_prebuilt_jar(
+    name = 'rt-stub.jar',
+    binary_jar = 'rt-stub.jar',
+    visibility = ['PUBLIC'],
+)

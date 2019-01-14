@@ -1,0 +1,19 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'protos.jar',
+    maven_coords = 'com.android.tools.analytics-library:protos:jar:26.2.0',
+    sha256 = '306784ac579be37f64f110204ea3fad8568e09e10817bb574bac0fc71b6402c5',
+)
+
+okbuck_prebuilt(
+    name = 'shared.jar',
+    maven_coords = 'com.android.tools.analytics-library:shared:jar:26.2.0',
+    sha256 = '10782c593b7edcaf63cf79f7179c4652fee1c01298e0d81d888eea5ea1c320d4',
+)
+
+okbuck_prebuilt(
+    name = 'tracker.jar',
+    maven_coords = 'com.android.tools.analytics-library:tracker:jar:26.2.0',
+    sha256 = '74e3cf587bcd6f5f14a6cddb8123c6940baf9947582f5356c25dd852c4726564',
+)

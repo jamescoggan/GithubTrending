@@ -1,0 +1,10 @@
+export_file(
+  name = 'debug.keystore',
+  mode = 'reference',
+  visibility = ['PUBLIC'],
+)
+export_file(
+  name = 'debug_2.keystore',
+  mode = 'reference',
+  visibility = ['PUBLIC'],
+)

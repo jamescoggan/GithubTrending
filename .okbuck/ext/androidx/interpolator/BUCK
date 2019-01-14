@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'interpolator.aar',
+    maven_coords = 'androidx.interpolator:interpolator:aar:1.0.0',
+    sha256 = '33193135a64fe21fa2c35eec6688f1a76e512606c0fc83dc1b689e37add7732a',
+    sources_sha256 = 'fa13ada71fe7bd9461f622f418e7c16a18e85da7708fb505c75229a9b8830345',
+)

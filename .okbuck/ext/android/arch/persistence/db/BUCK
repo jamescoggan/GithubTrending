@@ -1,0 +1,13 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'db.aar',
+    maven_coords = 'android.arch.persistence:db:aar:1.1.0',
+    sha256 = '0952938cf7262b810f3682e9f03a7aedd4dc987538ba93b0db0da831f26e252b',
+)
+
+okbuck_prebuilt(
+    name = 'db-framework.aar',
+    maven_coords = 'android.arch.persistence:db-framework:aar:1.1.0',
+    sha256 = 'b1ac06047a1244cbe97908b7d875fd7c48c46d25a84acf9497b59a8e71a7916c',
+)

@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'slidingpanelayout.aar',
+    maven_coords = 'androidx.slidingpanelayout:slidingpanelayout:aar:1.0.0',
+    sha256 = '76bffb7cefbf780794d8817002dad1562f3e27c0a9f746d62401c8edb30aeede',
+    sources_sha256 = '7865eedfcadc4d97c912bc8cf4b2e9c18a10b7c8b5eb51db0917d784467a78f7',
+)

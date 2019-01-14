@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'coordinatorlayout.aar',
+    maven_coords = 'androidx.coordinatorlayout:coordinatorlayout:aar:1.0.0',
+    sha256 = 'e508c695489493374d942bf7b4ee02abf7571d25aac4c622e57d6cd5cd29eb73',
+    sources_sha256 = '4381bcad818975abb0e74af1b313744067f3742da179223c8e633e6821c8f7a8',
+)

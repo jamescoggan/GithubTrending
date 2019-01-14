@@ -1,0 +1,15 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'auto-value-gson-annotations.jar',
+    maven_coords = 'com.ryanharter.auto.value:auto-value-gson-annotations:jar:0.7.0',
+    sha256 = 'a79e97ce62e4ee1a41854b43d94065147904d9a054f3b675662bbcf32c0b58fb',
+    sources_sha256 = '96f2b391ab9ff2c31594cd45e2c7aeb29ad7d66bc089d98d34b2159db6c0fb4d',
+)
+
+okbuck_prebuilt(
+    name = 'auto-value-gson.jar',
+    maven_coords = 'com.ryanharter.auto.value:auto-value-gson:jar:0.7.0',
+    sha256 = '0b55b2634b768b7634bb1b7c70912af103ab30ec250725c40826e81a440646d7',
+    sources_sha256 = '99bac967875dd75c3e8a6a39c13b9b5604cbbb6e8582ce12a50c855f11c20e14',
+)

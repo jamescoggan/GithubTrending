@@ -1,0 +1,6 @@
+http_file(
+    name = 'Saxon-HE.jar',
+    urls = [ 'mvn:' + 'net.sf.saxon:Saxon-HE:jar:9.7.0-15' ],
+    out = 'Saxon-HE.jar',
+    sha256 = '030fd8caaaab5b1399fa26be34e0ef56afd61c6a16c977898387d9137de19c6a',
+)

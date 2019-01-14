@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'reactive-streams.jar',
+    maven_coords = 'org.reactivestreams:reactive-streams:jar:1.0.2',
+    sha256 = 'cc09ab0b140e0d0496c2165d4b32ce24f4d6446c0a26c5dc77b06bdf99ee8fae',
+    sources_sha256 = '963a6480f46a64013d0f144ba41c6c6e63c4d34b655761717a436492886f3667',
+)

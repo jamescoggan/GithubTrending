@@ -1,0 +1,14 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'javapoet.jar',
+    maven_coords = 'com.squareup:javapoet:jar:1.10.0',
+    sha256 = '20ef4b82e43ff7c652281a21313cf3b941092467add3fa73509c26f6969efdab',
+)
+
+okbuck_prebuilt(
+    name = 'javawriter.jar',
+    maven_coords = 'com.squareup:javawriter:jar:2.1.1',
+    sha256 = 'f699823d0081f69cbb676c1845ea222e0ada79bc88a53e5d22d8bd02d328f57e',
+    sources_sha256 = 'f57646206c5908c69342022c7b5ccbc15dbf605ce80421da3b96af9f86331e28',
+)

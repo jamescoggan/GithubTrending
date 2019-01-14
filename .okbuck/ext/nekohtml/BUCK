@@ -1,0 +1,14 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'nekohtml.jar',
+    maven_coords = 'nekohtml:nekohtml:jar:1.9.6.2',
+    sha256 = 'fdff6cfa9ed9cc911c842a5d2395f209ec621ef1239d46810e9e495809d3ae09',
+    sources_sha256 = 'd1a7d483aedee77a4a4e3a66f2589780552ca150a8aafcb114325655d72c911b',
+)
+
+okbuck_prebuilt(
+    name = 'xercesMinimal.jar',
+    maven_coords = 'nekohtml:xercesMinimal:jar:1.9.6.2',
+    sha256 = '95b8b357d19f63797dd7d67622fd3f18374d64acbc6584faba1c7759a31e8438',
+)

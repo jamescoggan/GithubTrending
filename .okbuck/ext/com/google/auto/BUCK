@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'auto-common.jar',
+    maven_coords = 'com.google.auto:auto-common:jar:0.10',
+    sha256 = 'b876b5fddaceeba7d359667f6c4fb8c6f8658da1ab902ffb79ec9a415deede5f',
+)

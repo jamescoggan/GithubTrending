@@ -1,0 +1,18 @@
+load('//.okbuck/defs:okbuck_targets.bzl', 'okbuck_android_prebuilt_aar')
+load('//tooling/buck-defs:project_targets.bzl', 'project_prebuilt_jar')
+
+okbuck_android_prebuilt_aar(
+    name = 'rxscreenshotdetector-1.2.0.aar',
+    aar = 'rxscreenshotdetector-1.2.0.aar',
+    source_jar = 'rxscreenshotdetector-1.2.0-sources.jar',
+    maven_coords = 'local:rxscreenshotdetector-1.2.0:aar:1.0.0-LOCAL',
+    enable_jetifier = True,
+    visibility = ['PUBLIC'],
+)
+
+project_prebuilt_jar(
+    name = 'buck-android-support.jar',
+    binary_jar = 'buck-android-support.jar',
+    maven_coords = 'local:buck-android-support:jar:1.0.0-LOCAL',
+    visibility = ['PUBLIC'],
+)

@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'istack-commons-runtime.jar',
+    maven_coords = 'com.sun.istack:istack-commons-runtime:jar:2.21',
+    sha256 = 'c33e67a0807095f02a0e2da139412dd7c4f9cc1a4c054b3e434f96831ba950f4',
+)

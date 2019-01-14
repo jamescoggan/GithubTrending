@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'antlr4.jar',
+    maven_coords = 'org.antlr:antlr4:jar:4.5.3',
+    sha256 = 'a32de739cfdf515774e696f91aa9697d2e7731e5cb5045ca8a4b657f8b1b4fb4',
+)

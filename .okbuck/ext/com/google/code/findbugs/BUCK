@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'jsr305.jar',
+    maven_coords = 'com.google.code.findbugs:jsr305:jar:2.0.1',
+    sha256 = '1e7f53fa5b8b5c807e986ba335665da03f18d660802d8bf061823089d1bee468',
+)

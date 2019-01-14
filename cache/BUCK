@@ -1,0 +1,754 @@
+load('//.okbuck/defs:okbuck_targets.bzl', 'okbuck_android_library', 'okbuck_keystore', 'okbuck_manifest', 'res_glob', 'subdir_glob')
+load('//tooling/buck-defs:project_targets.bzl', 'project_android_binary')
+
+okbuck_manifest(
+    name = 'manifest_lib_debug',
+    main_manifest = 'src/main/AndroidManifest.xml',
+    min_sdk = '16',
+    target_sdk = '28',
+    package = 'co.joebirch.cache',
+    version_code = '1',
+    version_name = '1.0',
+    debuggable = True,
+)
+
+android_resource(
+    name = 'res_debug',
+    package = 'co.joebirch.cache',
+    res = res_glob([
+        ('src/main/res', '**'),
+    ]),
+    project_res = 'src/main/res',
+    deps = [
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+okbuck_android_library(
+    name = 'src_debug',
+    srcs = glob([
+        'src/main/java/**/*.java',
+        'src/main/java/**/*.kt',
+        'src/main/kotlin/**/*.java',
+        'src/main/kotlin/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    tests = [
+        ':test_debug',
+        ':bin_debug_test',
+    ],
+    plugins = [
+        '//.okbuck/ext/android/arch/persistence/room:room_kapt_compiler',
+        '//.okbuck/workspace/processor:processor_com.google.auto.value-auto-value-1.6__525046afa7fcbcf1dcd36f17908d83ff',
+    ],
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-P',
+        'plugin:org.jetbrains.kotlin.android:variant=main;libraries/kotlinandroidlibrary/src/main/res,plugin:org.jetbrains.kotlin.android:package=co.joebirch.cache,plugin:org.jetbrains.kotlin.android:experimental=true',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+#         '-Werror',
+        '-Xjsr305=strict',
+    ],
+    manifest = ':manifest_lib_debug',
+    language = 'kotlin',
+    lint_src_dirs = [
+        'src/main/java',
+        'src/main/kotlin',
+    ],
+    lint_res_dirs = [
+        'src/main/res',
+    ],
+    lint_options = [
+        '--exitcode',
+        '--config $(location //:lint.xml)',
+    ],
+
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+#         '//.okbuck/ext/com/google/dagger:dagger.jar',
+#         '//.okbuck/ext/com/google/dagger:dagger-compiler.jar',
+        '//.okbuck/ext/com/android/support:support-annotations.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-runtine.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-rxjava2.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-common.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+        ':manifest_lib_debug',
+        ':res_debug',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+robolectric_test(
+    name = 'test_debug',
+    srcs = glob([
+        'src/test/java/**/*.java',
+        'src/test/java/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-P',
+        'plugin:org.jetbrains.kotlin.android:variant=main;libraries/kotlinandroidlibrary/src/main/res,plugin:org.jetbrains.kotlin.android:package=co.joebirch.cache,plugin:org.jetbrains.kotlin.android:experimental=true',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+#         '-Werror',
+        '-Xjsr305=strict',
+        '-Xfriend-paths=buck-out/gen/libraries/kotlinandroidlibrary/lib__src_debug__output/src_debug.jar',
+    ],
+    vm_args = [
+        '-Djava.awt.headless=true',
+        '-Dfile.encoding=UTF-8',
+        '-Duser.country=GB',
+        '-Duser.language=en',
+        '-Duser.variant',
+        '-ea',
+    ],
+    robolectric_manifest = ':manifest_lib_debug',
+    force_final_resource_ids = False,
+    robolectric_runtime_dependency = '//.okbuck/workspace/robolectric:robolectric_cache',
+    language = 'kotlin',
+
+    deps = [
+# '//.okbuck/ext/androidx/annotation:annotation.jar',
+# '//.okbuck/ext/androidx/appcompat:appcompat.aar',
+# '//.okbuck/ext/androidx/arch/core:core-common.jar',
+# '//.okbuck/ext/androidx/arch/core:core-runtime.aar',
+# '//.okbuck/ext/androidx/asynclayoutinflater:asynclayoutinflater.aar',
+# '//.okbuck/ext/androidx/collection:collection.jar',
+# '//.okbuck/ext/androidx/coordinatorlayout:coordinatorlayout.aar',
+# '//.okbuck/ext/androidx/core:core.aar',
+# '//.okbuck/ext/androidx/cursoradapter:cursoradapter.aar',
+# '//.okbuck/ext/androidx/customview:customview.aar',
+# '//.okbuck/ext/androidx/documentfile:documentfile.aar',
+# '//.okbuck/ext/androidx/drawerlayout:drawerlayout.aar',
+# '//.okbuck/ext/androidx/fragment:fragment.aar',
+# '//.okbuck/ext/androidx/interpolator:interpolator.aar',
+# '//.okbuck/ext/androidx/legacy:legacy-support-core-ui.aar',
+# '//.okbuck/ext/androidx/legacy:legacy-support-core-utils.aar',
+# '//.okbuck/ext/androidx/lifecycle:lifecycle-common.jar',
+# '//.okbuck/ext/androidx/lifecycle:lifecycle-livedata-core.aar',
+# '//.okbuck/ext/androidx/lifecycle:lifecycle-livedata.aar',
+# '//.okbuck/ext/androidx/lifecycle:lifecycle-runtime.aar',
+# '//.okbuck/ext/androidx/lifecycle:lifecycle-viewmodel.aar',
+# '//.okbuck/ext/androidx/loader:loader.aar',
+# '//.okbuck/ext/androidx/localbroadcastmanager:localbroadcastmanager.aar',
+# '//.okbuck/ext/androidx/print:print.aar',
+# '//.okbuck/ext/androidx/slidingpanelayout:slidingpanelayout.aar',
+# '//.okbuck/ext/androidx/swiperefreshlayout:swiperefreshlayout.aar',
+# '//.okbuck/ext/androidx/vectordrawable:vectordrawable-animated.aar',
+# '//.okbuck/ext/androidx/vectordrawable:vectordrawable.aar',
+# '//.okbuck/ext/androidx/versionedparcelable:versionedparcelable.aar',
+# '//.okbuck/ext/androidx/viewpager:viewpager.aar',
+'//.okbuck/ext/androidx/test:monitor.aar',
+'//.okbuck/ext/androidx/test:rules.aar',
+'//.okbuck/ext/androidx/test:runner.aar',
+'//.okbuck/ext/backport-util-concurrent:backport-util-concurrent.jar',
+'//.okbuck/ext/classworlds:classworlds.jar',
+'//.okbuck/ext/com/almworks/sqlite4java:sqlite4java.jar',
+'//.okbuck/ext/com/google/android/apps/common/testing/accessibility/framework:accessibility-test-framework.jar',
+'//.okbuck/ext/com/google/guava:guava.jar',
+'//.okbuck/ext/com/google/protobuf:protobuf-java.jar',
+'//.okbuck/ext/com/ibm/icu:icu4j.jar',
+'//.okbuck/ext/com/thoughtworks/xstream:xstream.jar',
+'//.okbuck/ext/junit:junit.jar',
+'//.okbuck/ext/nekohtml:nekohtml.jar',
+'//.okbuck/ext/nekohtml:xercesMinimal.jar',
+'//.okbuck/ext/org/apache/ant:ant-launcher.jar',
+'//.okbuck/ext/org/apache/ant:ant.jar',
+'//.okbuck/ext/org/apache/maven/wagon:wagon-file.jar',
+'//.okbuck/ext/org/apache/maven/wagon:wagon-http-lightweight.jar',
+'//.okbuck/ext/org/apache/maven/wagon:wagon-http-shared.jar',
+'//.okbuck/ext/org/apache/maven/wagon:wagon-provider-api.jar',
+'//.okbuck/ext/org/apache/maven:maven-ant-tasks.jar',
+'//.okbuck/ext/org/apache/maven:maven-artifact-manager.jar',
+'//.okbuck/ext/org/apache/maven:maven-artifact.jar',
+'//.okbuck/ext/org/apache/maven:maven-error-diagnostics.jar',
+'//.okbuck/ext/org/apache/maven:maven-model.jar',
+'//.okbuck/ext/org/apache/maven:maven-plugin-registry.jar',
+'//.okbuck/ext/org/apache/maven:maven-profile.jar',
+'//.okbuck/ext/org/apache/maven:maven-project.jar',
+'//.okbuck/ext/org/apache/maven:maven-repository-metadata.jar',
+'//.okbuck/ext/org/apache/maven:maven-settings.jar',
+'//.okbuck/ext/org/bouncycastle:bcprov-jdk15on.jar',
+'//.okbuck/ext/org/codehaus/plexus:plexus-container-default.jar',
+'//.okbuck/ext/org/codehaus/plexus:plexus-interpolation.jar',
+'//.okbuck/ext/org/codehaus/plexus:plexus-utils.jar',
+'//.okbuck/ext/org/hamcrest:hamcrest-core.jar',
+'//.okbuck/ext/org/hamcrest:hamcrest-library.jar',
+'//.okbuck/ext/org/ow2/asm:asm-commons.jar',
+'//.okbuck/ext/org/ow2/asm:asm-tree.jar',
+'//.okbuck/ext/org/ow2/asm:asm.jar',
+'//.okbuck/ext/org/robolectric:annotations.jar',
+'//.okbuck/ext/org/robolectric:junit.jar',
+'//.okbuck/ext/org/robolectric:resources.jar',
+'//.okbuck/ext/org/robolectric:robolectric.jar',
+'//.okbuck/ext/org/robolectric:sandbox.jar',
+'//.okbuck/ext/org/robolectric:shadowapi.jar',
+'//.okbuck/ext/org/robolectric:shadows-framework.jar',
+'//.okbuck/ext/org/robolectric:utils.jar',
+'//.okbuck/ext/xmlpull:xmlpull.jar',
+'//.okbuck/ext/xpp3:xpp3_min.jar',
+
+
+        '//.okbuck/ext/android/arch/core:core-testing.jar',
+        '//.okbuck/ext/android/arch/core:runtime.jar',
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+#         '//.okbuck/ext/com/google/dagger:dagger.jar',
+#         '//.okbuck/ext/com/google/dagger:dagger-compiler.jar',
+        '//.okbuck/ext/com/android/support:support-annotations.jar',
+        '//.okbuck/ext/com/android/support:support-compat.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-compiler.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-runtine.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-rxjava2.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-common.jar',
+        '//.okbuck/ext/android/arch/persistence/db:db.aar',
+        '//.okbuck/ext/android/arch/persistence/db:db-framework.aar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//.okbuck/ext/junit:junit.jar',
+        '//.okbuck/ext/net/bytebuddy:byte-buddy-agent.jar',
+        '//.okbuck/ext/net/bytebuddy:byte-buddy.jar',
+        '//.okbuck/ext/org/hamcrest:hamcrest-core.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test-annotations-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test-junit.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-test.jar',
+        '//.okbuck/ext/org/mockito:mockito-core.jar',
+        '//.okbuck/ext/org/objenesis:objenesis.jar',
+        '//.okbuck/ext/org/robolectric:annotations.jar',
+        '//.okbuck/ext/org/robolectric:junit.jar',
+        '//.okbuck/ext/org/robolectric:resources.jar',
+        '//.okbuck/ext/org/robolectric:robolectric.jar',
+        '//.okbuck/ext/org/robolectric:sandbox.jar',
+        '//.okbuck/ext/org/robolectric:shadowapi.jar',
+        '//.okbuck/ext/org/robolectric:shadows-framework.jar',
+        '//.okbuck/ext/org/robolectric:utils.jar',
+        '//Data:src_main',
+        ':manifest_lib_debug',
+        ':res_debug',
+        ':src_debug',
+    ],
+    labels = [
+        'unit',
+        'android',
+        'robolectric',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+
+okbuck_manifest(
+    name = 'manifest_lib_debug_test',
+    main_manifest = 'src/main/AndroidManifest.xml',
+    min_sdk = '16',
+    target_sdk = '28',
+    package = 'co.joebirch.cache.test',
+    version_code = '1',
+    version_name = '1.0',
+    debuggable = True,
+)
+
+android_resource(
+    name = 'res_debug_test',
+    package = 'co.joebirch.cache.test',
+    deps = [
+        ':res_debug',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+android_build_config(
+    name = 'build_config_debug_test',
+    package = 'co.joebirch.cache.test',
+    values = [
+        'String APPLICATION_ID = "co.joebirch.cache.test"',
+        'String BUILD_TYPE = "debug"',
+        'String FLAVOR = ""',
+        'int VERSION_CODE = 1',
+        'String VERSION_NAME = "1.0"',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+okbuck_android_library(
+    name = 'src_debug_test',
+    srcs = glob([
+        'src/androidTest/java/**/*.java',
+        'src/androidTest/java/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    manifest = ':manifest_lib_debug_test',
+    language = 'kotlin',
+    lint_src_dirs = [
+        'src/androidTest/java',
+    ],
+    lint_options = [
+        '--exitcode',
+        '--config $(location //:lint.xml)',
+    ],
+
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp-logging-interceptor.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:adapter-rxjava2.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:converter-gson.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:retrofit.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+        ':build_config_debug_test',
+        ':manifest_lib_debug_test',
+        ':res_debug',
+        ':res_debug_test',
+        ':src_debug',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+okbuck_keystore(
+  name = 'keystore_debug_test',
+  storeFile = '//config/signing:debug.keystore',
+  storePassword = 'android',
+  keyAlias = 'AndroidDebugKey',
+  keyPassword = 'android'
+)
+
+okbuck_manifest(
+    name = 'manifest_bin_debug_test',
+    main_manifest = 'src/main/AndroidManifest.xml',
+    min_sdk = '16',
+    target_sdk = '28',
+    package = 'co.joebirch.cache.test',
+    version_code = '1',
+    version_name = '1.0',
+    debuggable = True,
+)
+
+project_android_binary(
+    name = 'bin_debug_test',
+    manifest_skeleton = ':manifest_bin_debug_test',
+    keystore = ':keystore_debug_test',
+    dex_tool = 'd8',
+    package_type = 'debug',
+    includes_vector_drawables = True,
+    manifest_entries = {
+        'placeholders': {
+            'applicationId': 'co.joebirch.cache.test',
+        },
+    },
+    deps = [
+        ':res_debug',
+        ':res_debug_test',
+        ':src_debug',
+        ':src_debug_test',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+okbuck_manifest(
+    name = 'manifest_lib_release',
+    main_manifest = 'src/main/AndroidManifest.xml',
+    min_sdk = '16',
+    target_sdk = '28',
+    package = 'co.joebirch.cache',
+    version_code = '1',
+    version_name = '1.0',
+    debuggable = False,
+)
+
+android_resource(
+    name = 'res_release',
+    package = 'co.joebirch.cache',
+    res = res_glob([
+        ('src/main/res', '**'),
+    ]),
+    project_res = 'src/main/res',
+    deps = [
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+okbuck_android_library(
+    name = 'src_release',
+    srcs = glob([
+        'src/main/java/**/*.java',
+        'src/main/java/**/*.kt',
+        'src/main/kotlin/**/*.java',
+        'src/main/kotlin/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    tests = [
+        ':test_release',
+    ],
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-P',
+        'plugin:org.jetbrains.kotlin.android:variant=main;libraries/kotlinandroidlibrary/src/main/res,plugin:org.jetbrains.kotlin.android:package=co.joebirch.cache,plugin:org.jetbrains.kotlin.android:experimental=true',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+        '-Werror',
+        '-Xjsr305=strict',
+    ],
+    manifest = ':manifest_lib_release',
+    language = 'kotlin',
+    lint_src_dirs = [
+        'src/main/java',
+        'src/main/kotlin',
+    ],
+    lint_res_dirs = [
+        'src/main/res',
+    ],
+    lint_options = [
+        '--exitcode',
+        '--config $(location //:lint.xml)',
+    ],
+
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+#         '//.okbuck/ext/com/google/dagger:dagger.jar',
+#         '//.okbuck/ext/com/google/dagger:dagger-compiler.jar',
+        '//.okbuck/ext/com/android/support:support-annotations.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-compiler.jar',
+        '//.okbuck/ext/android/arch/persistence/room:room-runtine.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-rxjava2.aar',
+        '//.okbuck/ext/android/arch/persistence/room:room-common.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+        ':manifest_lib_release',
+        ':res_release',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+robolectric_test(
+    name = 'test_release',
+    srcs = glob([
+        'src/test/java/**/*.java',
+        'src/test/java/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-P',
+        'plugin:org.jetbrains.kotlin.android:variant=main;libraries/kotlinandroidlibrary/src/main/res,plugin:org.jetbrains.kotlin.android:package=co.joebirch.cache,plugin:org.jetbrains.kotlin.android:experimental=true',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+        '-Werror',
+        '-Xjsr305=strict',
+        '-Xfriend-paths=buck-out/gen/libraries/kotlinandroidlibrary/lib__src_release__output/src_release.jar',
+    ],
+    vm_args = [
+        '-Djava.awt.headless=true',
+        '-Dfile.encoding=UTF-8',
+        '-Duser.country=GB',
+        '-Duser.language=en',
+        '-Duser.variant',
+        '-ea',
+    ],
+    robolectric_manifest = ':manifest_lib_release',
+    force_final_resource_ids = False,
+    robolectric_runtime_dependency = '//.okbuck/workspace/robolectric:robolectric_cache',
+    language = 'kotlin',
+
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp-logging-interceptor.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:adapter-rxjava2.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:converter-gson.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:retrofit.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+        ':manifest_lib_release',
+        ':res_release',
+        ':src_release',
+    ],
+    labels = [
+        'unit',
+        'android',
+        'robolectric',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+
+okbuck_manifest(
+    name = 'manifest_lib_custom',
+    main_manifest = 'src/main/AndroidManifest.xml',
+    min_sdk = '16',
+    target_sdk = '28',
+    package = 'co.joebirch.cache',
+    version_code = '1',
+    version_name = '1.0',
+    debuggable = False,
+)
+
+android_resource(
+    name = 'res_custom',
+    package = 'co.joebirch.cache',
+    res = res_glob([
+        ('src/custom_res', '**'),
+        ('src/main/res', '**'),
+    ]),
+    project_res = 'src/main/res',
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp-logging-interceptor.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:adapter-rxjava2.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:converter-gson.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:retrofit.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+okbuck_android_library(
+    name = 'src_custom',
+    srcs = glob([
+        'src/custom/kotlin/**/*.java',
+        'src/custom/kotlin/**/*.kt',
+        'src/main/java/**/*.java',
+        'src/main/java/**/*.kt',
+        'src/main/kotlin/**/*.java',
+        'src/main/kotlin/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    tests = [
+        ':test_custom',
+    ],
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-P',
+        'plugin:org.jetbrains.kotlin.android:variant=custom;libraries/kotlinandroidlibrary/src/custom_res,plugin:org.jetbrains.kotlin.android:variant=main;libraries/kotlinandroidlibrary/src/main/res,plugin:org.jetbrains.kotlin.android:package=co.joebirch.cache,plugin:org.jetbrains.kotlin.android:experimental=true',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+        '-Werror',
+        '-Xjsr305=strict',
+    ],
+    manifest = ':manifest_lib_custom',
+    language = 'kotlin',
+    lint_src_dirs = [
+        'src/custom/kotlin',
+        'src/main/java',
+        'src/main/kotlin',
+    ],
+    lint_res_dirs = [
+        'src/custom_res',
+        'src/main/res',
+    ],
+    lint_options = [
+        '--exitcode',
+        '--config $(location //:lint.xml)',
+    ],
+
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp-logging-interceptor.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:adapter-rxjava2.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:converter-gson.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:retrofit.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+        ':manifest_lib_custom',
+        ':res_custom',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+
+lib_deps = []
+
+robolectric_test(
+    name = 'test_custom',
+    srcs = glob([
+        'src/test/java/**/*.java',
+        'src/test/java/**/*.kt',
+    ]),
+    source = '8',
+    target = '8',
+    provided_deps = [
+        '//.okbuck/workspace/d8:rt-stub.jar',
+    ],
+    extra_kotlinc_arguments = [
+        '-Xplugin=buck-out/gen/kotlin_home/kotlin_home/libexec/lib/kotlin-allopen.jar',
+        '-P',
+        'plugin:org.jetbrains.kotlin.android:variant=custom;libraries/kotlinandroidlibrary/src/custom_res,plugin:org.jetbrains.kotlin.android:variant=main;libraries/kotlinandroidlibrary/src/main/res,plugin:org.jetbrains.kotlin.android:package=co.joebirch.cache,plugin:org.jetbrains.kotlin.android:experimental=true',
+        '-jvm-target',
+        '1.6',
+        '-no-reflect',
+        '-no-stdlib',
+        '-progressive',
+        '-Werror',
+        '-Xjsr305=strict',
+        '-Xfriend-paths=buck-out/gen/libraries/kotlinandroidlibrary/lib__src_custom__output/src_custom.jar',
+    ],
+    vm_args = [
+        '-Djava.awt.headless=true',
+        '-Dfile.encoding=UTF-8',
+        '-Duser.country=GB',
+        '-Duser.language=en',
+        '-Duser.variant',
+        '-ea',
+    ],
+    robolectric_manifest = ':manifest_lib_custom',
+    force_final_resource_ids = False,
+    robolectric_runtime_dependency = '//.okbuck/workspace/robolectric:robolectric_cache',
+    language = 'kotlin',
+
+    deps = [
+        '//.okbuck/ext/com/google/code/gson:gson.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp-logging-interceptor.jar',
+        '//.okbuck/ext/com/squareup/okhttp3:okhttp.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:adapter-rxjava2.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:converter-gson.jar',
+        '//.okbuck/ext/com/squareup/retrofit2:retrofit.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxjava.jar',
+        '//.okbuck/ext/io/reactivex/rxjava2:rxkotlin.jar',
+        '//.okbuck/ext/javax/annotation:jsr250-api.jar',
+        '//.okbuck/ext/javax/inject:javax.inject.jar',
+        '//.okbuck/ext/org/jetbrains:annotations.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib-common.jar',
+        '//.okbuck/ext/org/jetbrains/kotlin:kotlin-stdlib.jar',
+        '//.okbuck/ext/org/reactivestreams:reactive-streams.jar',
+        '//Data:src_main',
+        ':manifest_lib_custom',
+        ':res_custom',
+        ':src_custom',
+    ],
+    labels = [
+        'unit',
+        'android',
+        'robolectric',
+    ],
+    visibility = [
+        'PUBLIC',
+    ],
+)
+

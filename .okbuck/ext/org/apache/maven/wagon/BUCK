@@ -1,0 +1,29 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'wagon-file.jar',
+    maven_coords = 'org.apache.maven.wagon:wagon-file:jar:1.0-beta-6',
+    sha256 = '7298feeb36ff14dd933c38e62585fb9973fea32fb3c4bc5379428cb1aac5dd3c',
+    sources_sha256 = 'c96ce725e9a3e1dc002a1304e2f88a7adfd5a0cf7967b665923654099cadc78a',
+)
+
+okbuck_prebuilt(
+    name = 'wagon-http-lightweight.jar',
+    maven_coords = 'org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-6',
+    sha256 = 'be214032de23c6b520b79c1ccdb160948e0c67ed7c11984b7ec4ca5537867b4e',
+    sources_sha256 = 'b1f94d1995cf84413bd0a49fa5ad003066cb389fb425b44cafb91dbb85827b0a',
+)
+
+okbuck_prebuilt(
+    name = 'wagon-http-shared.jar',
+    maven_coords = 'org.apache.maven.wagon:wagon-http-shared:jar:1.0-beta-6',
+    sha256 = 'f095c882716d49269a806685dcb256fa6a36389b2713ac56bb758bf8693565a2',
+    sources_sha256 = '2772ddff54f12e10f3b91969463b045255a1a40a246689daf9ffadd17934997f',
+)
+
+okbuck_prebuilt(
+    name = 'wagon-provider-api.jar',
+    maven_coords = 'org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-6',
+    sha256 = 'e116f32edcb77067289a3148143f2c0c97b27cf9a1342f8108ee37dec4868861',
+    sources_sha256 = 'b6d1e11b976d085d6796ccb11cca3c68e7857786294e8298760f8673e5c9c9ac',
+)

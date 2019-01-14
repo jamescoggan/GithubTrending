@@ -1,0 +1,7 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'FastInfoset.jar',
+    maven_coords = 'com.sun.xml.fastinfoset:FastInfoset:jar:1.2.13',
+    sha256 = '27a77db909f3c2833c0b1a37c55af1db06045118ad2eed96ce567b6632bce038',
+)

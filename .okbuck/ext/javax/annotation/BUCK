@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'jsr250-api.jar',
+    maven_coords = 'javax.annotation:jsr250-api:jar:1.0',
+    sha256 = 'a1a922d0d9b6d183ed3800dfac01d1e1eb159f0e8c6f94736931c1def54a941f',
+    sources_sha256 = '025c47d76c60199381be07012a0c5f9e74661aac5bd67f5aec847741c5b7f838',
+)

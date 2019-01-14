@@ -1,0 +1,8 @@
+load('//.okbuck/defs:okbuck_prebuilt.bzl', 'okbuck_prebuilt')
+
+okbuck_prebuilt(
+    name = 'transition.aar',
+    maven_coords = 'androidx.transition:transition:aar:1.0.0',
+    sha256 = 'a00a0f763f401abcecda9b0eafcb738929c5801b111a9a414b81a193d0f4008d',
+    sources_sha256 = '53725dfc16e856cd65ac410ec8aeb40d444517d34e43802fc79e9d30f59ca2da',
+)
